@@ -1,0 +1,157 @@
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "hello portrait"
+    "name portrait"
+    "seeking portrait"
+    "updated portrait"
+    "link-group link-group";
+  padding-top: 10rem;
+  column-gap: 10%;
+  height: 80vh;
+  max-width: 90%;
+  margin: 0 auto; /* Center the container */
+  scroll-snap-align: start;
+  color: rgba(255, 255, 255, 0.807);
+  align-items: end;
+  justify-content: center;
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 4rem;
+  }
+}
+.intro {
+  margin-left: 50%;
+  width: 100%; /* Ensures the text block takes the full width of the column */
+  overflow-wrap: break-word; /* Breaks words to prevent overflow */
+  width: max-content;
+  display: inline-block;
+  padding-bottom: 1rem;
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    margin: 0;
+    padding-bottom: 1px;
+  }
+}
+
+.hello {
+  grid-area: hello;
+  font-weight: 700;
+  margin: 0;
+  font-size: 6rem;
+  letter-spacing: 2px;
+  animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+    color: white;
+  }
+}
+.name,
+.last-updated,
+.currently-seeking {
+  margin: 0;
+  margin-right: 3rem;
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+}
+.name {
+  grid-area: name;
+  font-size: 3.75rem;
+  letter-spacing: 2px;
+  @media (max-width: 768px) {
+    font-size: 2.75em !important;
+    line-height: 50%;
+  }
+}
+.currently-seeking {
+  grid-area: seeking;
+  grid-area: name;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--secondary-color);
+  display: inline-block;
+  @media (max-width: 768px) {
+    font-size: 1.2em !important;
+    margin-block: 0.6rem;
+    padding-top: 1rem;
+  }
+}
+.last-updated {
+  grid-area: updated;
+  font-size: 1rem;
+  color: var(--grey-color);
+  @media (max-width: 768px) {
+    font-size: 1em !important;
+  }
+}
+
+.portfolio-pic {
+  grid-area: portrait;
+  margin-left: 5rem;
+  opacity: 0.7;
+  box-shadow: 3px 3px 1px white;
+  outline: 2px solid white;
+  /* Max-width ensures the image doesn't overflow the column */
+  max-width: 80%;
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    margin: 0;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.caret {
+  color: white;
+  animation: blink 1s infinite linear;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.role {
+  display: inline-block;
+}
+.link-group {
+  grid-area: link-group;
+  grid-column: 2; /* Align the link group under the portrait */
+  display: flex;
+  gap: 3.5rem;
+  width: max-content;
+  /* Max-width ensures the image doesn't overflow the column */
+  max-width: 100%;
+  margin-left: 5rem;
+  padding-block: 8rem;
+  transform: scale(1.5);
+  transform-origin: center left;
+  @media (max-width: 768px) {
+    margin-left: 0 !important;
+    margin-top: 1rem;
+    transform: scale(1);
+    transform-origin: center;
+    padding: 0;
+  }
+}
+.link-group a {
+  color: white;
+  cursor: pointer;
+}
