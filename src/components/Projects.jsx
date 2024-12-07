@@ -34,6 +34,9 @@ export default function Projects() {
         <img src={gitLogo} className="flying-image" alt="logo" />
       </div>
       <div className="projects-track">
+        <div className="prj-trk-header">
+          <p> Title </p> <p>Technology</p>
+        </div>
         {content.map((proj) => (
           <div
             key={proj.id}

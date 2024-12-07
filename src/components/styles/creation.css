@@ -92,7 +92,6 @@
   display: flex;
   white-space: nowrap;
   overflow-x: scroll;
-  height: 4rem;
 }
 .tech-used {
   /* each block takes up equal size| min-size| max-size  */
