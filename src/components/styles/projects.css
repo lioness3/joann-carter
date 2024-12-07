@@ -1,0 +1,171 @@
+.projects-section {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto; /* Center the container */
+}
+.logo-background-container {
+  display: flex;
+  position: absolute;
+  top: -1rem;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.flying-image {
+  z-index: -1;
+  animation: fall 20s infinite ease-in;
+  height: 5rem;
+  max-width: 8%;
+  opacity: 0;
+  filter: grayscale(90%);
+  @media (max-width: 768px) {
+    max-height: 5%;
+  }
+}
+
+.flying-image:nth-child(1) {
+  animation-delay: 11s;
+}
+.flying-image:nth-child(2) {
+  animation-delay: 1s;
+}
+.flying-image:nth-child(3) {
+  animation-delay: 9s;
+}
+.flying-image:nth-child(4) {
+  animation-delay: 4s;
+}
+.flying-image:nth-child(5) {
+  animation-delay: 12s;
+}
+.flying-image:nth-child(6) {
+  animation-delay: 3s;
+}
+.flying-image:nth-child(7) {
+  animation-delay: 18s;
+}
+.flying-image:nth-child(8) {
+  animation-delay: 6s;
+}
+
+/* next image needs 7+ sec delay  */
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  35% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+}
+
+.projects-track {
+  display: flex; /* Make the track a flex container */
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center the cards vertically */
+  row-gap: 1rem;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  height: max-content;
+  width: max-content;
+  max-width: 90%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.934);
+}
+/* used for glow gradient */
+.projects-track::before,
+.projects-track::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -2px; /* makes the element match the project track with a top, left, bottom, right at 0. -.5 to give it a border */
+  background: conic-gradient(
+    from var(--gradient-angle),
+    black,
+    black,
+    var(--primary-color),
+    black
+  );
+  opacity: 0.8;
+  border-radius: inherit;
+  animation: rotation 8s linear infinite;
+}
+.projects-track::after {
+  filter: blur(10rem);
+}
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.prjs-card {
+  height: max-content;
+  width: 35rem;
+  max-width: 90%;
+  padding-block: 0.25rem;
+  padding-inline: 0.25rem;
+  border-radius: var(--border-radius);
+  background-color: #f0f0f021;
+  z-index: 3;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  box-shadow: 0px 0px 3px var(--button-color);
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    width: 60vw;
+  }
+}
+.prjs-card:hover {
+  transform: scale(1.01); /* Slightly enlarge the card */
+  border: 2px solid white;
+  color: white;
+}
+
+.prj-card-title {
+  color: rgba(255, 255, 255, 0.753);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-align: start;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem;
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.909);
+  }
+}
+.logo-img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.logo-group {
+  text-align: right;
+  white-space: nowrap;
+}

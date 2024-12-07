@@ -1,0 +1,126 @@
+.creation-section {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(--shadow-color);
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  /* shifts the element by half its width and height, effectively centering it */
+  transform: translate(-50%, -50%);
+  height: max-content;
+  width: 70vw;
+  max-width: 90%;
+  margin: 0 auto; /* Center the container */
+  height: 80vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  align-items: center;
+}
+.prj-card {
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+  margin: 2px;
+  height: max-content;
+  width: 90%;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+.prj-title {
+  flex-grow: 1; /* Make the title take up available space */
+  text-align: center; /* Center the title text */
+  font-size: 3rem;
+  margin: 0;
+  @media (max-width: 994px) {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+.git-cont {
+  display: flex;
+  justify-content: space-between;
+}
+.git-cont a {
+  margin-right: 2rem;
+}
+.prj-header {
+  margin: 0;
+  font-size: 1rem;
+  align-self: start;
+  color: var(--grey-color);
+  padding: 0;
+}
+.prj-content {
+  padding: 0rem 1rem;
+  @media (max-width: 994px) {
+    font-size: 0.75rem;
+  }
+}
+.close-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  color: var(--grey-color);
+}
+
+.inline-display {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  @media (max-width: 994px) {
+    column-gap: 0.75rem;
+  }
+}
+
+.color-palette-cont {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.color-block {
+  /* each block takes up equal size| min-size| max-size  */
+  flex: 1 0 auto;
+  border: 1px solid lightgray;
+  border-radius: 6rem;
+}
+
+.tech-container {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  height: 4rem;
+}
+.tech-used {
+  /* each block takes up equal size| min-size| max-size  */
+  height: 2rem;
+  width: auto;
+}
+.demo-img {
+  height: auto;
+  width: 15rem;
+  max-width: 100%;
+  border: 1px solid var(--grey-color);
+  border-radius: var(--border-radius);
+  margin: auto;
+}
+.demo-group {
+  display: flex;
+  justify-content: space-evenly;
+  @media (max-width: 1391px) {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: auto;
+  }
+}
+.bottom-buttons {
+  position: relative;
+}
+.close-btn-btm {
+  position: absolute;
+  bottom: 0;
+  color: var(--grey-color);
+}

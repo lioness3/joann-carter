@@ -1,0 +1,28 @@
+.header-card {
+  height: max-content;
+  background-color: rgba(255, 255, 255, 0.07);
+  position: relative;
+  top: 0;
+  max-width: 100%;
+  margin: 0 auto; /* Center the container */
+  padding: 1rem 2rem;
+  /* top-left | top-right | bottom-right | bottom-left */
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.header-title {
+  color: rgba(255, 255, 255, 0.309);
+  font-size: 3rem;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media (max-width: 768px) {
+    font-size: 1.75rem !important;
+  }
+}
+.header-title span {
+  color: rgba(255, 255, 255, 0.509);
+  padding: 0.25rem;
+}
