@@ -7,11 +7,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
 import cat from "../images/shadow.jpg";
 import truck from "../images/truck.png";
+import construction1 from "../images/construction.png";
 import { FaRegHandshake } from "react-icons/fa";
 import { IoSchoolOutline } from "react-icons/io5";
 import { GoLightBulb } from "react-icons/go";
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import { MdOutlineEmojiNature } from "react-icons/md";
+import { GiBrain } from "react-icons/gi";
 
 import { CgScrollV } from "react-icons/cg";
 export default function About() {
@@ -48,7 +50,7 @@ export default function About() {
     // HIRE ME
     <div className="about-section">
       <div ref={scrollRef} className="about-track">
-        {showIcon ? <CgScrollV size={42} className="scroll-icon" /> : null}
+        {showIcon ? <CgScrollV size={168} className="scroll-icon" /> : null}
         <div
           className="about-card "
           onClick={() => setShowContentHire(!showContentHire)}
@@ -113,9 +115,12 @@ export default function About() {
           ) : (
             <div className="contact-me">
               {/* Backside, shows when clicked */}
-              <p className="back-heading">Contact Me </p>
-              <p className="back-text">Email: Joann333Carter@gmail.com</p>
-              <p className="back-text">Text: (603)566-5610</p>
+              <p className="back-heading">Coding Bootcamp </p>
+              <p className="back-text">
+                A coding boot camp in Portland, Oregon, intensified my ability
+                to collaborate effectively through peer programming and quickly
+                adapt to new challenges.
+              </p>
               <div className="contact-link-group">
                 <a
                   href="https://github.com/lioness3"
@@ -166,6 +171,7 @@ export default function About() {
             <div>
               {/* Backside, shows when clicked */}
               <p className="back-heading">Creative and Logical</p>
+              <GiBrain size={logoSize} color={logoColor} />
               <p className="back-text">
                 My goal is to build user-friendly and visually appealing
                 applications that solve real-world problems.
@@ -212,6 +218,7 @@ export default function About() {
               </p>
 
               <img
+                className="const-truck"
                 src={truck}
                 alt="construction truck for decoration animation"
               />
