@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./styles/about.css";
 import Pdf from "../images/Resume_JoannCarter_Nov24.pdf";
 import Tooltip from "@mui/material/Tooltip";
@@ -12,6 +12,8 @@ import { IoSchoolOutline } from "react-icons/io5";
 import { GoLightBulb } from "react-icons/go";
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import { MdOutlineEmojiNature } from "react-icons/md";
+
+import { CgScrollV } from "react-icons/cg";
 export default function About() {
   const [showContentHire, setShowContentHire] = useState(true); //used to hide/show Hire Me content- shows front side first
   const [showContentCurrently, setShowContentCurrently] = useState(true); //used to hide/show Currently content - shows front side first
@@ -20,10 +22,33 @@ export default function About() {
   const [showContentGrad, setShowContentGrad] = useState(true); //used to hide/show that I have a degeree - shows front side first
   const logoSize = 48; //decorative logo SIZE on about cards
   const logoColor = "rgba(0,0,0,.8)"; //decorative logo SIZE on about cards
+
+  //hide and show scro;; ocpn to prompt user to scroll more
+  const [showIcon, setShowIcon] = useState(true);
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = scrollRef.current.scrollTop;
+      //when the div starts to scroll, hide the scroll icon
+      if (scrollTop > 3) {
+        setShowIcon(false);
+      } else {
+        setShowIcon(true);
+      }
+    };
+
+    scrollRef.current.addEventListener("scroll", handleScroll);
+
+    return () => {
+      scrollRef.current.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     // HIRE ME
     <div className="about-section">
-      <div className="about-track">
+      <div ref={scrollRef} className="about-track">
+        {showIcon ? <CgScrollV size={42} className="scroll-icon" /> : null}
         <div
           className="about-card "
           onClick={() => setShowContentHire(!showContentHire)}
