@@ -7,12 +7,19 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
 import cat from "../images/shadow.jpg";
 import truck from "../images/truck.png";
+import { FaRegHandshake } from "react-icons/fa";
+import { IoSchoolOutline } from "react-icons/io5";
+import { GoLightBulb } from "react-icons/go";
+import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
+import { MdOutlineEmojiNature } from "react-icons/md";
 export default function About() {
   const [showContentHire, setShowContentHire] = useState(true); //used to hide/show Hire Me content- shows front side first
   const [showContentCurrently, setShowContentCurrently] = useState(true); //used to hide/show Currently content - shows front side first
   const [showContentCreative, setShowContentCreative] = useState(true); //used to hide and show Creative content - shows front side first
   const [showContentFreeTime, setShowContentFreeTime] = useState(true); // used to hide/show free time content - shows front side first
   const [showContentGrad, setShowContentGrad] = useState(true); //used to hide/show that I have a degeree - shows front side first
+  const logoSize = 48; //decorative logo SIZE on about cards
+  const logoColor = "rgba(0,0,0,.8)"; //decorative logo SIZE on about cards
   return (
     // HIRE ME
     <div className="about-section">
@@ -26,6 +33,7 @@ export default function About() {
               {/* Front side Hire Me */}
               <p className="sm-heading">You should </p>
               <p className="lg-heading button-highlight">HIRE ME</p>
+              <FaRegHandshake size={logoSize} color={logoColor} />
               <p className="med-text">
                 {" "}
                 because I am trust-worthy, a
@@ -66,6 +74,7 @@ export default function About() {
               {/* Front side GRAD */}
               <p className="sm-heading">Academic Excellence </p>
               <p className="lg-heading button-highlight">4.0 GPA</p>
+              <IoSchoolOutline size={logoSize} color={logoColor} />
               <p className="med-text">
                 B.S.C.S.
                 <br />
@@ -120,6 +129,7 @@ export default function About() {
               {/* Front side CREATIVE */}
               <p className="sm-heading">I turn </p>
               <p className="lg-heading  animated-text">CREATIVE</p>
+              <GoLightBulb size={logoSize} color={logoColor} />
               <p className="med-text">
                 ideas into tangible
                 <span className="keyword-link"> solutions</span>, combining
@@ -152,6 +162,7 @@ export default function About() {
               {/* Front side CURRENTLY */}
               <p className="sm-heading">I am </p>
               <p className="lg-heading button-highlight">CURRENTLY</p>
+              <HiMiniDevicePhoneMobile size={logoSize} color={logoColor} />
               <p className="med-text">
                 working on a mobile application called,
                 <br />
@@ -193,6 +204,7 @@ export default function About() {
               {/* Front side FREE TIME */}
               <p className="sm-heading">In my </p>
               <p className="lg-heading button-highlight">FREE TIME</p>
+              <MdOutlineEmojiNature size={logoSize} color={logoColor} />
               <p className="med-text">
                 I enjoy making art out of recycled material, recharging in
                 nature and traveling with
