@@ -9,7 +9,7 @@
     "link-group link-group";
   padding-top: 10rem;
   column-gap: 10%;
-  height: 100vh;
+  height: 80vh;
   max-width: 90%;
   margin: 0 auto; /* Center the container */
   scroll-snap-align: start;
@@ -17,7 +17,7 @@
   align-items: end;
   justify-content: center;
   /* Media query for smaller screens */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +34,7 @@
   display: inline-block;
   padding-bottom: 1rem;
   /* Media query for smaller screens */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     margin: 0;
     padding-bottom: 1px;
   }
@@ -65,7 +65,7 @@
   margin: 0;
   margin-right: 3rem;
   /* Media query for smaller screens */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     margin: 0;
   }
 }
@@ -73,7 +73,7 @@
   grid-area: name;
   font-size: 3.75rem;
   letter-spacing: 2px;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     font-size: 2.75em !important;
     line-height: 50%;
   }
@@ -85,9 +85,9 @@
   letter-spacing: 1px;
   color: var(--secondary-color);
   display: inline-block;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     font-size: 1.2em !important;
-    margin-block: 0.6rem;
+    margin-block: 2.5rem;
     padding-top: 1rem;
   }
 }
@@ -95,8 +95,8 @@
   grid-area: updated;
   font-size: 1rem;
   color: var(--grey-color);
-  @media (max-width: 768px) {
-    font-size: 1em !important;
+  @media (max-width: 900px) {
+    font-size: 0.75rem !important;
   }
 }
 
@@ -109,9 +109,10 @@
   /* Max-width ensures the image doesn't overflow the column */
   max-width: 80%;
   /* Media query for smaller screens */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     margin: 0;
     margin-bottom: 0.25rem;
+    width: 60%;
   }
 }
 
@@ -143,15 +144,15 @@
   padding-block: 8rem;
   transform: scale(1.5);
   transform-origin: center left;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     margin-left: 0 !important;
-    margin-top: 1rem;
+    margin-top: 2rem;
     transform: scale(1);
     transform-origin: center;
     padding: 0;
   }
 }
 .link-group a {
-  color: white;
+  color: rgba(255, 255, 255, 0.898);
   cursor: pointer;
 }

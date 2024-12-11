@@ -67,9 +67,8 @@ export default function About() {
               <p className="sm-heading">Academic Excellence </p>
               <p className="lg-heading button-highlight">4.0 GPA</p>
               <p className="med-text">
-                Bachelor of Science <br />
-                in <br />
-                Computer Science, <br />
+                B.S.C.S.
+                <br />
                 with a <br />
                 <span className="keyword-link">
                   Software Enginnering Major.

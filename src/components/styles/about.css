@@ -1,21 +1,26 @@
 .about-section {
   background-image: url("/src/images/hireMe.png");
-  height: 90vh;
+  height: 70vh;
   /* overflow: hidden; */
   align-content: center;
   opacity: 0.9;
-  max-width: 100%;
+  width: 100vw;
   margin: 0 auto; /* Center the container */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   @media (max-width: 1482px) {
     background-image: url("/src/images/low-poly-grid-haikei.svg");
-    place-items: center;
+    display: flex;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .about-track {
+  background-color: rgba(0, 0, 0, 0.607);
+  border-radius: var(--border-radius);
   display: grid;
   overflow-y: scroll;
   gap: 10rem;
@@ -31,17 +36,19 @@
   box-shadow: 0px 0px 2rem rgba(255, 255, 255, 0.194);
   @media (max-width: 1482px) {
     padding-top: 1rem;
+    padding-bottom: 40%;
     width: 80%;
     height: 40vh;
     justify-content: center;
     overflow-x: hidden;
     margin: 0 !important;
     padding-inline: 0%;
-    gap: 8rem;
+    gap: 5rem;
   }
 }
 .about-card {
   height: max-content;
+  min-height: 15rem;
   width: 30rem;
   position: relative;
   top: 2rem;
@@ -50,6 +57,9 @@
     rgba(240, 241, 252, 0.5),
     rgba(255, 255, 255, 0.339)
   );
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   backdrop-filter: blur(7px);
   border-radius: var(--border-radius);
@@ -59,7 +69,7 @@
   color: rgba(0, 0, 0, 0.876);
   z-index: 3;
   border: 2px solid rgba(237, 235, 235, 0.129);
-  text-shadow: 0px 1px 1.5rem rgb(253, 250, 250);
+  text-shadow: 0px 0px 3rem rgb(253, 250, 250);
   overflow: hidden;
   cursor: pointer;
   @media (max-width: 1482px) {
@@ -90,7 +100,8 @@
 /* large heading and med text margin left need to match  */
 .lg-heading {
   font-size: 5rem;
-  margin: auto;
+  margin: 0;
+  width: 100%;
   font-weight: 900;
   line-height: 80%;
   @media (max-width: 1482px) {
@@ -98,8 +109,10 @@
     padding-block: 0.25rem;
   }
   @media (max-width: 700px) {
-    font-size: 2rem;
-    line-height: 90%;
+    font-size: 1.75rem;
+    line-height: 100%;
+    padding-top: 1rem;
+    text-align: center;
   }
 }
 .med-text {
@@ -108,6 +121,7 @@
   margin: 0;
   @media (max-width: 700px) {
     font-size: 1rem;
+    padding: 1rem;
   }
 }
 .keyword-link {
@@ -119,7 +133,7 @@
   }
 }
 .subtle-heading {
-  color: rgba(0, 0, 0, 0.261);
+  color: rgba(0, 0, 0, 0.436);
   padding: 0;
   margin-bottom: 0;
   @media (max-width: 700px) {
@@ -131,8 +145,9 @@
 }
 
 .animated-text {
-  width: max-content;
-  margin: auto;
+  width: 100%; /*   for centering on card */
+  margin: 0;
+  text-align: center;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text; /* For older WebKit browsers */
@@ -235,7 +250,8 @@
   border-radius: var(--border-radius);
 }
 .cat-img img {
-  height: 13rem;
+  height: auto;
+  width: 95%;
   text-align: center;
   border-radius: var(--border-radius);
   box-shadow: 0px 0px 50px white;
