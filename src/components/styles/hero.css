@@ -9,7 +9,7 @@
     "link-group link-group";
   padding-top: 10rem;
   column-gap: 10%;
-  height: 80vh;
+  height: 100vh;
   max-width: 90%;
   margin: 0 auto; /* Center the container */
   scroll-snap-align: start;

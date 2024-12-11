@@ -1,14 +1,19 @@
 .header-card {
-  height: 10%;
+  height: 10vh;
   background-color: rgba(255, 255, 255, 0.07);
   position: relative;
   top: 0;
   max-width: 100%;
   margin: 0 auto; /* Center the container */
   padding: 1rem 2rem;
-  /* top-left | top-right | bottom-right | bottom-left */
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+  /* Flexbox for vertical alignment */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
+
 .header-title {
   color: rgba(255, 255, 255, 0.309);
   font-size: 3rem;
@@ -16,13 +21,16 @@
   margin: 0;
   text-align: center;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  @media (max-width: 768px) {
-    font-size: 1.75rem !important;
-  }
 }
+
 .header-title span {
   color: rgba(255, 255, 255, 0.509);
   padding: 0.25rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.75rem !important;
+  }
 }
