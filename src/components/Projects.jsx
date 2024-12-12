@@ -1,6 +1,6 @@
 import "./styles/projects.css";
 import content from "./Content";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Creation from "./Creation";
 import cssLogo from "../images/css-3.svg";
 import jsLogo from "../images/jsLogo.png";
@@ -14,12 +14,24 @@ import gitLogo from "../images/githubWhite.svg";
 export default function Projects() {
   const [showMore, setShowMore] = useState(false);
   const [prjInFocus, setPrjInFocus] = useState({});
+  const creationRef = useRef(null);
 
-  const handleShowMore = (project) => {
+  const handleShowMore = (index) => {
     // toggle the show more state from true to false with each click
     setShowMore(!showMore);
-    setPrjInFocus(project);
+    setPrjInFocus(content[index]); // Access project by index
   };
+  const handleNextPrj = () => {
+    const currentIdx = content.indexOf(prjInFocus); // Get current index
+    const nextIdx = (currentIdx + 1) % content.length; // Wrap around for last project
+    setPrjInFocus(content[nextIdx]);
+  };
+  useEffect(() => {
+    if (creationRef.current) {
+      // Scroll to the top of the Creation component
+      creationRef.current.scrollTop = 0;
+    }
+  }, [prjInFocus]);
 
   return (
     <div className="projects-section">
@@ -41,7 +53,7 @@ export default function Projects() {
           <div
             key={proj.id}
             className="prjs-card"
-            onClick={() => handleShowMore(proj)}
+            onClick={() => handleShowMore(proj.id)}
           >
             <h4 className="prj-card-title">{proj.title}</h4>
 
@@ -63,6 +75,7 @@ export default function Projects() {
                 if show more is true then render the creation component */}
       {showMore ? (
         <Creation
+          ref={creationRef}
           title={prjInFocus.title}
           description={prjInFocus.description}
           language={prjInFocus.language}
@@ -73,6 +86,7 @@ export default function Projects() {
           wireframe={prjInFocus.wireframe}
           gitLink={prjInFocus.gitLink}
           onClose={handleShowMore}
+          onNext={handleNextPrj}
         />
       ) : null}
     </div>

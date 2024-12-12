@@ -39,12 +39,7 @@ export default function About() {
         setShowIcon(true);
       }
     };
-
     scrollRef.current.addEventListener("scroll", handleScroll);
-
-    return () => {
-      scrollRef.current.removeEventListener("scroll", handleScroll);
-    };
   }, []);
   return (
     // HIRE ME

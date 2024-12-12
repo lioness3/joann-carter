@@ -25,6 +25,12 @@
   padding: 1rem;
   color: white;
   opacity: 0.5;
+  @media (min-width: 1482px) {
+    left: 5%;
+    bottom: 25%;
+    opacity: 0.2;
+    transform: scale(3);
+  }
 }
 .about-track {
   position: relative;
