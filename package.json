@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://lioness3.github.io/joann-carter/",
+  "homepage": "www.joanncarter.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
