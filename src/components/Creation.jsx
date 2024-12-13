@@ -5,13 +5,18 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { forwardRef } from "react";
 const Creation = forwardRef((props, ref) => {
+  const buttonSize = 32;
   return (
     // TITLE
     <div className="creation-section" ref={ref}>
       <div className="prj-card">
         <p className="prj-header"> Title:</p>
         <p className="prj-title">{props.title}</p>
-        <AiFillCloseCircle className="close-btn" onClick={props.onClose} />
+        <AiFillCloseCircle
+          className="close-btn"
+          onClick={props.onClose}
+          size={buttonSize}
+        />
       </div>
       {/* TECH IMG */}
       <div className=" prj-card inline-display">
@@ -77,10 +82,10 @@ const Creation = forwardRef((props, ref) => {
         <AiFillCloseCircle
           className="close-btn-btm"
           onClick={props.onClose}
-          size={32}
+          size={buttonSize}
         />
         <MdOutlineNavigateNext
-          size={32}
+          size={buttonSize}
           className="next-btn-btm"
           onClick={props.onNext}
         />

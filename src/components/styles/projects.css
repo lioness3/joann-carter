@@ -31,7 +31,7 @@
   animation-delay: 11s;
 }
 .flying-image:nth-child(2) {
-  animation-delay: 1s;
+  animation-delay: 0s;
 }
 .flying-image:nth-child(3) {
   animation-delay: 9s;
@@ -125,7 +125,7 @@
   justify-content: space-between;
   align-items: end;
   color: var(--grey-color);
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   margin: 0;
   padding: 0;
   height: max-content;
@@ -135,7 +135,24 @@
   margin: 0;
   padding: 0;
 }
-
+/* background animation switch  */
+.toggle-animation-switch .MuiSwitch-thumb {
+  color: var(--grey-color); /* Change the thumb color */
+}
+.toggle-animation-switch .MuiSwitch-track {
+  background-color: var(--grey-color); /* Change the track color */
+}
+.toggle-animation-switch .MuiFormControlLabel-label {
+  font-size: 0.25rem;
+  color: var(--grey-color);
+}
+/* When switch is checked */
+.toggle-animation-switch .Mui-checked .MuiSwitch-thumb {
+  color: var(--grey-color); /* Change the thumb color */
+}
+.toggle-animation-switch .Mui-checked + .MuiSwitch-track {
+  background-color: var(--grey-color); /* Change the track color */
+}
 .prjs-card {
   height: max-content;
   width: 35rem;

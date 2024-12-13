@@ -1,6 +1,8 @@
 import "./styles/projects.css";
 import content from "./Content";
 import { useState, useRef, useEffect } from "react";
+import Switch from "@mui/material/Switch";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import Creation from "./Creation";
 import cssLogo from "../images/css-3.svg";
 import jsLogo from "../images/jsLogo.png";
@@ -13,6 +15,7 @@ import gitLogo from "../images/githubWhite.svg";
 
 export default function Projects() {
   const [showMore, setShowMore] = useState(false);
+  const [checked, setChecked] = useState(true);
   const [prjInFocus, setPrjInFocus] = useState({});
   const creationRef = useRef(null);
 
@@ -26,6 +29,9 @@ export default function Projects() {
     const nextIdx = (currentIdx + 1) % content.length; // Wrap around for last project
     setPrjInFocus(content[nextIdx]);
   };
+  const handleChecked = (event) => {
+    setChecked(event.target.checked);
+  };
   useEffect(() => {
     if (creationRef.current) {
       // Scroll to the top of the Creation component
@@ -35,16 +41,18 @@ export default function Projects() {
 
   return (
     <div className="projects-section">
-      <div className="logo-background-container">
-        <img src={cssLogo} className="flying-image" alt="logo" />
-        <img src={jsLogo} className="flying-image" alt="logo" />
-        <img src={reactLogo} className="flying-image" alt="logo" />
-        <img src={pythonLogo} className="flying-image" alt="logo" />
-        <img src={javaLogo} className="flying-image" alt="logo" />
-        <img src={htmlLogo} className="flying-image" alt="logo" />
-        <img src={dockerLogo} className="flying-image" alt="logo" />
-        <img src={gitLogo} className="flying-image" alt="logo" />
-      </div>
+      {checked ? (
+        <div className="logo-background-container">
+          <img src={cssLogo} className="flying-image" alt="logo" />
+          <img src={jsLogo} className="flying-image" alt="logo" />
+          <img src={reactLogo} className="flying-image" alt="logo" />
+          <img src={pythonLogo} className="flying-image" alt="logo" />
+          <img src={javaLogo} className="flying-image" alt="logo" />
+          <img src={htmlLogo} className="flying-image" alt="logo" />
+          <img src={dockerLogo} className="flying-image" alt="logo" />
+          <img src={gitLogo} className="flying-image" alt="logo" />
+        </div>
+      ) : null}
       <div className="projects-track">
         <div className="prj-trk-header">
           <p> Title </p> <p>Technology</p>
@@ -69,6 +77,37 @@ export default function Projects() {
             </div>
           </div>
         ))}
+        <FormControlLabel
+          control={
+            <Switch
+              checked={checked}
+              onChange={handleChecked}
+              size="small"
+              color="var(--primary-color)"
+              sx={{
+                "& .MuiSwitch-track": {
+                  backgroundColor: checked
+                    ? "var(--primary-color)"
+                    : "var(--grey-color)",
+                  opacity: ".7",
+                },
+                "& .MuiSwitch-thumb": {
+                  backgroundColor: checked
+                    ? "var(--primary-color)"
+                    : "var(--grey-color)",
+                },
+              }}
+            />
+          }
+          label="Animate Background"
+          sx={{
+            color: checked ? "var(--grey-color)" : "var(--primary-color)",
+            "& .MuiFormControlLabel-label": {
+              fontSize: ".75rem", // Set your desired font size here
+              opacity: ".6",
+            },
+          }}
+        />
       </div>
 
       {/* shows the details of the project the user clicks on
