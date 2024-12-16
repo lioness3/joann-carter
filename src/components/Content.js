@@ -36,7 +36,7 @@ import truck from "../images/truck.png";
 
 const content = [
   {
-    id: 1,
+    id: 0,
     title: "Ocean Harbor Condo",
     description:
       "This website serves a condominium association in Florida. It features a public section with information for those interested in visiting Ocean Harbor, and a private residents-only portal for community interaction and exclusive resources.",
@@ -54,7 +54,7 @@ const content = [
       "Looking back, I would collaborate closely with the client to obtain all required content before commencing the layout design process. And, I would create detailed mockups that incorporate interactive elements to provide a realistic user experience.",
   },
   {
-    id: 2,
+    id: 1,
     title: "Dine or Ditch",
     description:
       "Dine or Ditch is a mobile application designed to assist users in choosing dining options based on their preferences, location, and current mood. The app provides a curated list of restaurant recommendations, helping users quickly decide where to eat with minimal hassle.",
@@ -76,7 +76,7 @@ const content = [
     afterthoughts: "This app is still under construction.",
   },
   {
-    id: 3,
+    id: 2,
     title: "Joann Carter Portfolio",
     description: `JoannCarter.com is my portfolio website, 
         designed to be clean and straightforward, with a focus on
@@ -105,7 +105,7 @@ const content = [
         cohesive and user-centered experience.`,
   },
   {
-    id: 4,
+    id: 3,
     title: "Bar Master",
     description: `Bar Master is a mock website created
         for a fictional bar company called 'Glass'.
@@ -134,7 +134,7 @@ const content = [
         and usability of the interface.`,
   },
   {
-    id: 5,
+    id: 4,
     title: "azZip Pizza",
     description: `AzZip Pizza is a website designed to use JavaScript
         Object Notation (JSON) to create the business logic needed for calculating 
@@ -158,7 +158,7 @@ const content = [
         by reducing visual distractions.`,
   },
   {
-    id: 6,
+    id: 5,
     title: "Embedded Systems- SOS",
     description: `This project demonstrates the application of state machines
         and GPIO pins to create a Morse code SOS signal. The device cycles through
@@ -179,7 +179,7 @@ const content = [
         communication, could further expand its capabilities`,
   },
   {
-    id: 7,
+    id: 6,
     title: "Thermostat",
     description: `This project leverages a TI microcontroller to implement a basic thermostat
         system. The thermostat utilizes a set of buttons to adjust the desired temperature.
@@ -193,7 +193,7 @@ const content = [
     afterthoughts: `While this project provides a strong foundation in microcontroller programming, there are opportunities for improvement. The code could benefit from refactoring to enhance efficiency and readability. Implementing robust error handling mechanisms would increase the system's reliability. Exploring additional features like calibration, hysteresis, or remote control could further expand the functionality of the thermostat. Finally, a more user-friendly interface, such as an LCD display or a mobile app, could enhance the user experience.`,
   },
   {
-    id: 8,
+    id: 7,
     title: "AI Treasure Pirate",
     description: `This project takes inspiration from a popular treasure hunt game where a pirate 
         races against the player to find hidden treasure.The pirate navigates a maze represented as a
@@ -217,7 +217,7 @@ const content = [
         responsible AI solutions.`,
   },
   {
-    id: 9,
+    id: 8,
     title: "Android App",
     description: `This Android application provides a user-friendly interface to manage inventory effectively.
         Users can easily add, edit, and delete inventory items, along with their corresponding quantities. The app 

@@ -81,14 +81,16 @@
   align-items: center; /* Center the cards vertically */
   row-gap: 1rem;
   border-radius: 1rem;
-  padding: 2rem 1rem;
+
   max-height: 70vh;
   height: max-content;
-
   width: max-content;
   max-width: 90%;
   position: relative;
   background: rgba(0, 0, 0, 0.934);
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
 }
 /* used for glow gradient */
 .projects-track::before,
@@ -125,6 +127,7 @@
   justify-content: space-between;
   align-items: end;
   color: var(--grey-color);
+  opacity: 0.5;
   font-size: 0.75rem;
   margin: 0;
   padding: 0;
@@ -170,7 +173,7 @@
   box-shadow: inset 0px 0px 3px var(--shadow-color);
   /* Media query for smaller screens */
   @media (max-width: 768px) {
-    width: 60vw;
+    width: 65vw;
   }
 }
 .prjs-card:hover {
@@ -192,7 +195,7 @@
   font-size: 1.5rem;
   /* Media query for smaller screens */
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.909);
     opacity: 1;
   }
