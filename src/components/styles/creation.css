@@ -37,11 +37,11 @@
 .prj-title {
   flex-grow: 1; /* Make the title take up available space */
   text-align: center; /* Center the title text */
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 0;
+
   @media (max-width: 994px) {
     font-size: 1.25rem;
-    font-weight: 500;
   }
 }
 .git-cont {
@@ -63,7 +63,8 @@
   }
 }
 .prj-content {
-  padding: 0rem 1rem;
+  padding: 0.25rem 1rem;
+  margin: 0;
   @media (max-width: 994px) {
     font-size: 0.75rem;
   }
@@ -104,9 +105,11 @@
 .tech-used {
   /* each block takes up equal size| min-size| max-size  */
   height: 2rem;
+  padding: 0.5rem 1rem;
   width: auto;
   @media (max-width: 994px) {
     height: 1rem;
+    padding: 0.2rem;
   }
 }
 .demo-img {
