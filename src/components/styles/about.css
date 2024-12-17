@@ -1,6 +1,6 @@
 .about-section {
   background-image: url("/src/images/hireMe.png");
-  height: 90vh;
+  height: 80vh;
   /* overflow: hidden; */
   align-content: center;
   opacity: 0.9;
@@ -17,20 +17,32 @@
     align-items: center;
   }
 }
-.scroll-icon {
+.scroll-cont {
   position: absolute;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 30%
+  );
+
   bottom: 0;
-  z-index: 4;
   place-self: center;
-  padding: 1rem;
+  z-index: 4;
+
+  border-radius: var(--border-radius);
+}
+.scroll-memo {
+  transform: translateY(50px);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.scroll-icon {
+  padding: 0;
   color: white;
-  opacity: 0.5;
-  @media (min-width: 1482px) {
-    left: 5%;
-    bottom: 25%;
-    opacity: 0.2;
-    transform: scale(3);
-  }
 }
 .about-track {
   position: relative;
@@ -40,7 +52,7 @@
   overflow-y: scroll;
   gap: 10rem;
   padding-bottom: 15rem;
-  padding-inline: 20%;
+  padding-inline: 15%;
   padding-top: 2rem;
   height: 40vh;
   width: max-content;

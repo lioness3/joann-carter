@@ -7,7 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
 import cat from "../images/shadow.jpg";
 import truck from "../images/truck.png";
-import construction1 from "../images/construction.png";
+
 import { FaRegHandshake } from "react-icons/fa";
 import { IoSchoolOutline } from "react-icons/io5";
 import { GoLightBulb } from "react-icons/go";
@@ -15,7 +15,8 @@ import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import { MdOutlineEmojiNature } from "react-icons/md";
 import { GiBrain } from "react-icons/gi";
 
-import { CgScrollV } from "react-icons/cg";
+import { FaCaretDown } from "react-icons/fa";
+
 export default function About() {
   const [showContentHire, setShowContentHire] = useState(true); //used to hide/show Hire Me content- shows front side first
   const [showContentCurrently, setShowContentCurrently] = useState(true); //used to hide/show Currently content - shows front side first
@@ -45,7 +46,14 @@ export default function About() {
     // HIRE ME
     <div className="about-section">
       <div ref={scrollRef} className="about-track">
-        {showIcon ? <CgScrollV size={168} className="scroll-icon" /> : null}
+        {showIcon ? (
+          <div className="scroll-cont">
+            <p className="scroll-memo">SCROLL DOWN </p>{" "}
+            <FaCaretDown size={168} className="scroll-icon" />
+            <FaCaretDown size={168} className="scroll-icon" />
+            <FaCaretDown size={168} className="scroll-icon" />
+          </div>
+        ) : null}
         <div
           className="about-card "
           onClick={() => setShowContentHire(!showContentHire)}
