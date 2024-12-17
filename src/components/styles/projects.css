@@ -83,13 +83,11 @@
   border-radius: 1rem;
   max-height: 70vh;
   height: max-content;
+  padding: 0.75rem;
   width: max-content;
   max-width: 90%;
   position: relative;
   background: rgba(0, 0, 0, 0.934);
-  @media (max-width: 768px) {
-    padding: 0.5rem;
-  }
 }
 /* used for glow gradient */
 .projects-track::before,
