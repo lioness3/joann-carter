@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./styles/about.css";
-import Pdf from "../images/Resume_JoannCarter_Nov24.pdf";
+import Pdf from "../images/Resume_Joann_Carter_25.pdf";
 import Tooltip from "@mui/material/Tooltip";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
