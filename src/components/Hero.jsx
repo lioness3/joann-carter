@@ -1,6 +1,6 @@
 // Top section of webpage called 'Hero'
 import "./styles/hero.css";
-import Pdf from "../images/Resume_Joann_Carter_25.pdf";
+import Pdf from "../images/JoannCarter_Resume_3_2025.pdf";
 import headShot from "../images/headshot.png";
 import { useEffect, useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -48,7 +48,7 @@ export default function Hero() {
             <span className="role"> {roles[currentWordIndex]}</span> // Show the current word
           )}{" "}
         </p>
-        <p className="last-updated">Last Updated: January, 2025</p>
+        <p className="last-updated">Last Updated: March, 2025</p>
       </div>
       {/* second column */}
       <div>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./styles/about.css";
-import Pdf from "../images/Resume_Joann_Carter_25.pdf";
+import Pdf from "../images/JoannCarter_Resume_3_2025.pdf";
 import Tooltip from "@mui/material/Tooltip";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -198,9 +198,11 @@ export default function About() {
               <p className="lg-heading button-highlight">CURRENTLY</p>
               <HiMiniDevicePhoneMobile size={logoSize} color={logoColor} />
               <p className="med-text">
-                working on a mobile application called,
+                enrolled in an online course,
+                {/* working on a mobile application called, */}
                 <br />
-                <span className="keyword-link"> Dine or Ditch </span>
+                <span className="keyword-link"> Google UX Design </span>
+                {/* <span className="keyword-link"> Dine or Ditch </span> */}
               </p>
               <p className="subtle-heading"> click to learn more</p>
             </div>
@@ -212,13 +214,25 @@ export default function About() {
                 An app that helps users decide where to eat.
               </p>
               <p className="back-text">
+                I am currently working on improving the UX design of the app
+                that I am building. This app uses your location to suggest a
+                random nearby restaurant. Built with React Native, Expo, and
+                TypeScript.
+              </p>
+              <p className="construction-text">
+                This app is under construction to improve the UI/UX.
+              </p>
+              {/* <p className="back-text">
+                An app that helps users decide where to eat.
+              </p>
+              <p className="back-text">
                 Feeling hungry? Let Dine or Ditch decide! This app uses your
                 location to suggest a random nearby restaurant. Built with React
                 Native, Expo, and TypeScript.
               </p>
               <p className="construction-text">
-                This app is still under construction
-              </p>
+                This app is still under construction.
+              </p> */}
 
               <img
                 className="const-truck"
