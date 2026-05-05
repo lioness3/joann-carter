@@ -32,12 +32,6 @@
   color: var(--text-90);
 }
 
-.hero-title {
-  font-size: 1.75rem;
-  color: var(--primary);
-  font-weight: bold;
-}
-
 .hero-image {
   max-width: 500px;
   height: auto;

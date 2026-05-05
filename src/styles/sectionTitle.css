@@ -4,11 +4,6 @@
   height: var(--section-title-height);
 }
 
-.section-title-content {
-  display: flex;
-  flex-direction: column;
-}
-
 .section-title-image {
   max-height: 100px;
   width: auto;
@@ -39,10 +34,6 @@
   .section-title-bg {
     padding-bottom: 0;
     margin-bottom: 0;
-  }
-  .section-title-content {
-    gap: 1rem;
-    text-align: center;
   }
   .section-title-text {
     text-align: center;

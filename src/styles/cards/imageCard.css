@@ -3,13 +3,15 @@
   flex-direction: column;
   max-width: 100%;
 }
-
+.image-card-intro {
+  color: var(--text-70);
+}
 .multiple {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  overflow-x: auto; /* ← required for scroll */
-  flex-shrink: 0; /* ← prevents collapsing */
+  overflow-x: auto; /*  required for scroll */
+  flex-shrink: 0; /*  prevents collapsing */
   gap: 1rem;
 }
 
@@ -25,8 +27,21 @@
 
 .image-card-caption {
   text-align: center;
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 1rem;
+  color: var(--text-50);
   margin-top: 0.5rem;
   line-height: 1.4;
+}
+.image-card-scroll-indicator {
+  font-size: 1.25rem;
+  color: var(--text-60);
+  text-align: center;
+}
+@media (max-width: 969px) {
+  .image-card-scroll-indicator {
+    font-size: 0.75rem;
+  }
+  .image-card-caption {
+    font-size: 0.7rem;
+  }
 }

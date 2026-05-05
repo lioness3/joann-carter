@@ -116,7 +116,7 @@ function CaseStudyDetail({ studies }) {
               className="contents-btn"
               onClick={() => setContentsOpen((prev) => !prev)}
             >
-              Contents ▾
+              Contents▾
             </button>
             <CaseStudyContentsMenu
               categories={categories}

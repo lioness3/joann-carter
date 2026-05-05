@@ -12,10 +12,6 @@
   background: rgba(0, 0, 0, 0.4);
   pointer-events: auto;
 }
-.icon {
-  height: 18px;
-  stroke: currentColor;
-}
 /* slide-out panel */
 .contents-menu {
   position: absolute;
@@ -30,18 +26,6 @@
   padding: 2rem 1.5rem;
   z-index: 1000;
 }
-.contents-menu-list {
-  list-style: none;
-}
-
-.contents-menu-link {
-  color: var(--text-90);
-  font-weight: bold;
-}
-.contents-menu-link:hover {
-  color: var(--primary);
-}
-
 .contents-menu.open {
   transform: translateX(0);
 }

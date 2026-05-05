@@ -60,15 +60,6 @@
   display: none;
 }
 
-.contents-btn {
-  background: none;
-  border: 1px solid var(--border-secondary);
-  padding: 0.5rem 1rem;
-  border-radius: var(--btnBorderRadius);
-  cursor: pointer;
-  font-size: 1rem;
-  color: var(--text-80);
-}
 .mobile-back-btn {
   display: none;
   background: none;
@@ -129,17 +120,6 @@
   border-bottom: 1px solid var(--border-secondary);
 }
 
-.side-menu-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--text-70);
-  font-size: 14px;
-  transition: color 0.2s ease;
-}
-
-.side-menu-link:hover,
 .side-menu-back:hover {
   color: var(--primary);
 }
@@ -199,9 +179,12 @@
     display: block;
     font-size: 1rem;
     background: none;
-    border: 1px solid var(--border-secondary);
+    border: 1px solid var(--border-primary);
     padding: 0.25rem 0.75rem;
-    border-radius: 6px;
+    background: none;
+    border-radius: var(--btnBorderRadius);
+    cursor: pointer;
+    color: var(--text-80);
   }
 
   .mobile-contents {
@@ -218,5 +201,6 @@
 
   .mobile-back-btn {
     display: block;
+    color: var(--primary);
   }
 }

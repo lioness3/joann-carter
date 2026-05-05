@@ -66,3 +66,14 @@
   margin-right: 0.4rem;
   font-weight: 500;
 }
+@media (max-width: 969px) {
+  .usability-card {
+    line-height: 1.2;
+  }
+  .usability-list {
+    padding: 0;
+  }
+  .usability-item {
+    line-height: 1.2;
+  }
+}

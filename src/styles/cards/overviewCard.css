@@ -9,6 +9,10 @@
   color: var(--text-90);
   margin-bottom: 0.5rem;
 }
+.overview-label {
+  font-weight: bold;
+  color: var(--text-80);
+}
 
 .info-card-description {
   font-size: 1rem;
