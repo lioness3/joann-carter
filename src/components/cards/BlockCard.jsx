@@ -10,14 +10,19 @@ export default function BlockCardList({
     return (
       <div
         className="block-card feedback-block"
-        style={{ backgroundColor: bgColor }}
+        // passes bgColor as a CSS variable so blockCard.css can layer it over white
+        style={{ "--block-color": bgColor }}
       >
         <p className="block-card-feedback">{quote}</p>
       </div>
     );
   } else {
     return (
-      <div className="block-card" style={{ backgroundColor: bgColor }}>
+      <div
+        className="block-card"
+        // passes bgColor as a CSS variable so blockCard.css can layer it over white
+        style={{ "--block-color": bgColor }}
+      >
         <h3 className="block-card-title">{item.title}</h3>
         <p className="block-card-description">{item.description}</p>
       </div>

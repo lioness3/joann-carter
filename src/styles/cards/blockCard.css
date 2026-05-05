@@ -7,7 +7,11 @@
   padding: 0.25rem 2rem 0.75rem 2rem;
   flex: 1;
   border-radius: var(--borderRadius);
-  color: var(--text-80);
+  /* block cards always have a white base so text must always be dark regardless of theme */
+  color: rgb(from var(--secondary) r g b / 0.8);
+  /* white sits beneath the transparent palette color so it shows in both light and dark mode */
+  background-color: white;
+  background-image: linear-gradient(var(--block-color), var(--block-color));
 }
 .block-card-title {
   text-align: center;
@@ -15,7 +19,7 @@
 }
 .block-card-description {
   text-align: center;
-  color: var(--text-70);
+  color: rgb(from var(--secondary) r g b / 0.7);
 }
 
 /* FEEDBACK styling */

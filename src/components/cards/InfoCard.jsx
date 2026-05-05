@@ -50,7 +50,7 @@ export default function InfoCard({ id, category, colorPalette }) {
         )}
         {/* Display for block cards that use the color palette of that project for background */}
         {category.type === "block" && (
-          <div className="info-card-block-row">
+          <div className="info-card-block-row white-bg">
             {category.items.map((item, index) => (
               <BlockCard
                 key={index}

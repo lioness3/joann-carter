@@ -16,7 +16,8 @@ export default function UsabilityCard({
           <div
             key={index}
             className="usability-block"
-            style={{ backgroundColor: colorPalette[index] }}
+            // passes color as a CSS variable so usabilityCard.css can layer it over white
+            style={{ "--block-color": colorPalette[index] }}
           >
             <h3 className="usability-round-label">{round.label}</h3>
             <p className="usability-round-subtitle">{round.subtitle}</p>

@@ -64,6 +64,7 @@
   flex-wrap: wrap; /* allows wrapping on smaller screens */
   align-self: stretch;
 }
+
 .info-card-image-row {
   display: flex;
   flex-direction: row;

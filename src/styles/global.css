@@ -97,7 +97,7 @@ html[data-theme="dark"] {
   --mainBg: #2d3543;
   --offWhite: #1a1f27;
   --ltGrey: #242b33;
-  --medGrey: #384551;
+  --medGrey: #2c3037;
   --transparent-bg: rgb(from var(--offWhite) r g b / 0.7);
 
   /* DARK MODE - Text colors on dark background (light text) */

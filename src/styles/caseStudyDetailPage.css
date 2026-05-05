@@ -90,7 +90,7 @@
 
 /* scrolling container that holds cards */
 .case-study-scrolling-container {
-  background-color: var(--medGrey);
+  background-color: var(--offWhite);
   grid-area: content;
   max-width: 100vw;
   height: calc(100vh - var(--nav-height) - var(--case-study-header-height));
@@ -111,7 +111,7 @@
   flex-direction: column;
   padding: 1rem;
   gap: 2rem;
-  background-color: var(--offWhite);
+  background-color: var(--medGrey); /* here*/
   border-right: 1px solid var(--border-secondary);
   overflow-x: hidden;
 }

@@ -1,7 +1,7 @@
 .usability-card {
   display: flex;
   flex-direction: column;
-
+  color: var(--text-70);
   max-width: 100%;
 }
 
@@ -13,7 +13,7 @@
 .usability-intro {
   font-size: 1rem;
   line-height: 1.6;
-  color: #444;
+  color: var(--text-70);
 }
 
 .usability-rounds {
@@ -26,7 +26,11 @@
   padding: 1.5rem;
   flex: 1;
   border-radius: var(--borderRadius);
-  color: #222;
+  /* usability blocks always have a white base so text must always be dark regardless of theme */
+  color: rgb(from var(--secondary) r g b / 0.8);
+  /* white sits beneath the transparent palette color so it shows in both light and dark mode */
+  background-color: white;
+  background-image: linear-gradient(var(--block-color), var(--block-color));
 }
 
 .usability-round-label {
@@ -58,7 +62,7 @@
 
 .usability-list li::before {
   content: "›";
-  color: #666;
+  color: rgb(from var(--secondary) r g b / 0.5);
   margin-right: 0.4rem;
   font-weight: 500;
 }
