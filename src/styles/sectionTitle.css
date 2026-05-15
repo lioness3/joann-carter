@@ -1,6 +1,7 @@
 .section-title-bg {
   background: var(--section-gradient);
   text-align: center;
+  padding: 1rem 0;
   height: var(--section-title-height);
 }
 
@@ -31,10 +32,6 @@
 }
 
 @media (max-width: 969px) {
-  .section-title-bg {
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
   .section-title-text {
     text-align: center;
   }
