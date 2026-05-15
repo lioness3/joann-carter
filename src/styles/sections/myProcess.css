@@ -75,4 +75,9 @@
   .process-section {
     padding: 3rem 1rem;
   }
+  .process-image-container img {
+    max-width: 90vw;
+    height: auto;
+    filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.3));
+  }
 }

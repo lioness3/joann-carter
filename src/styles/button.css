@@ -20,16 +20,35 @@
   background: var(--btn-hover);
 }
 
-.custom-primary-button-text {
+.button-text {
   display: flex;
   align-items: center;
 }
-.custom-primary-button-icon {
+.button-icon {
   display: flex;
   align-items: center;
-  color: white;
   vertical-align: middle;
   font-size: 1.2rem;
+}
+
+/* OUTLINE BUTTON - transparent bg, primary border + text */
+.custom-outline-button {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: var(--btnBorderRadius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+}
+
+.custom-outline-button:hover {
+  background-color: rgb(from var(--primary) r g b / 0.08);
 }
 
 /* CUSTOM SECONDARY BUTTON-outline style */
@@ -52,11 +71,6 @@
 
 .custom-secondary-button:hover {
   background-color: rgb(from var(--primary) r g b / 0.1);
-}
-
-.custom-secondary-button-text {
-  display: flex;
-  align-items: center;
 }
 
 /* HERO BUTTON - view my work */

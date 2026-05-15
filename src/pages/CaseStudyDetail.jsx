@@ -1,9 +1,11 @@
+import { FaChevronDown } from "react-icons/fa";
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 
 import InfoCard from "../components/cards/InfoCard";
 import CaseStudySideMenu from "../components/navigation/CaseStudySideMenu";
 import CaseStudyContentsMenu from "../components/navigation/CaseStudyContentsMenu";
+import Button from "../components/Button";
 import "../styles/caseStudyDetailPage.css";
 
 function CaseStudyDetail({ studies }) {
@@ -112,12 +114,14 @@ function CaseStudyDetail({ studies }) {
             >
               ←
             </Link>
-            <button
-              className="contents-btn"
+            <Button
+              btnText="Contents"
+              icon={<FaChevronDown />}
+              iconRight
+              variant="outline"
+              classN="contents-btn"
               onClick={() => setContentsOpen((prev) => !prev)}
-            >
-              Contents▾
-            </button>
+            />
             <CaseStudyContentsMenu
               categories={categories}
               open={contentsOpen}

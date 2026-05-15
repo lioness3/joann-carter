@@ -176,15 +176,10 @@
   }
   /* display the contents button for smaller screen instead of the side menu */
   .contents-btn {
-    display: block;
-    font-size: 1rem;
-    background: none;
-    border: 1px solid var(--border-primary);
+    display: flex;
     padding: 0.25rem 0.75rem;
-    background: none;
-    border-radius: var(--btnBorderRadius);
-    cursor: pointer;
-    color: var(--text-80);
+    margin-bottom: 0;
+    font-size: 0.9rem;
   }
 
   .mobile-contents {

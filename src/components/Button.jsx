@@ -3,27 +3,47 @@ import "../styles/button.css";
 export default function Button({
   classN = "",
   icon = null,
+  iconRight = false,
   onClick,
   btnText = "",
-  //pass primary = false to this compoennt with a link to use the secondary button
-  primary = true,
+  // "primary" | "secondary" | "outline"
+  variant = "primary",
   link = "",
 }) {
-  // PRIMARY BUTTON - for navigation (default)
-  if (primary) {
+  const iconEl = icon && <span className="button-icon">{icon}</span>;
+  const textEl = btnText && <span className="button-text">{btnText}</span>;
+  const children = (
+    <>
+      {iconRight ? textEl : iconEl}
+      {iconRight ? iconEl : textEl}
+    </>
+  );
+
+  if (variant === "outline") {
+    return (
+      <button
+        type="button"
+        className={`custom-outline-button ${classN}`}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    );
+  }
+
+  if (variant === "primary") {
     return (
       <button
         type="button"
         className={`custom-primary-button ${classN}`}
         onClick={onClick}
       >
-        {icon && <span className="button-icon">{icon}</span>}
-        {btnText && <span className="button-text">{btnText}</span>}
+        {children}
       </button>
     );
   }
 
-  // SECONDARY BUTTON - for links
+  // SECONDARY — link style
   return (
     <a
       href={link}
@@ -31,8 +51,7 @@ export default function Button({
       rel="noopener noreferrer"
       className={`custom-secondary-button ${classN}`}
     >
-      {icon && <span className="button-icon">{icon}</span>}
-      {btnText && <span className="button-text">{btnText}</span>}
+      {children}
     </a>
   );
 }

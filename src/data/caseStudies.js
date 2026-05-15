@@ -63,7 +63,7 @@ import inventory_final2 from "../assets/images/inventory-bar/inventory_final2.pn
 //ANDROID APP - Inventroy TRACKING
 import androidAppImg from "../assets/images/AndroidApp/Android1.png";
 import androidAppImg2 from "../assets/images/AndroidApp/Android2.png";
-import androidAppCodeImg from "../assets/images/AndroidApp/Android3.png";
+import androidAppCodeImg from "../assets/images/development-iMac-24-inch.png";
 
 export const caseStudies = [
   {
