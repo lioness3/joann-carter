@@ -1,34 +1,45 @@
 import "../../styles/navigation/globalMobileMenu.css";
 import { Link } from "react-router-dom";
-
+// used for the hamburger button instead of top nav on smaller screens
 export default function GlobalMobileMenu({ open, setOpen }) {
-  const closeMenu = () => setOpen(false);
+  const rootStyles = getComputedStyle(document.documentElement);
+  const navHeight = parseInt(rootStyles.getPropertyValue("--nav-height"), 10); // turn the nav height css variable into a number
 
+  const scrollToBottom = document.body.scrollHeight - navHeight;
   return (
     <>
       <div
         className={`global-overlay ${open ? "open" : ""}`}
-        onClick={closeMenu}
+        onClick={() => setOpen(false)}
       />
 
       <nav className={`global-mobile-menu ${open ? "open" : ""}`}>
-        <Link to="/" state={{ scrollTo: "case-studies" }} onClick={closeMenu}>
+        <button className="global-close-btn" onClick={() => setOpen(false)}>
+          ×
+        </button>
+
+        <Link to="/" state={{ scrollTo: "case-studies" }} onClick={() => setOpen(false)}>
           Case Studies
         </Link>
-        <Link to="/" state={{ scrollTo: "my-process" }} onClick={closeMenu}>
+
+        <Link to="/" state={{ scrollTo: "my-process" }} onClick={() => setOpen(false)}>
           My Process
         </Link>
-        <Link to="/" state={{ scrollTo: "resume-section" }} onClick={closeMenu}>
+        <Link to="/" state={{ scrollTo: "resume-section" }} onClick={() => setOpen(false)}>
           Resume
         </Link>
-        <Link to="/" state={{ scrollTo: "about-me" }} onClick={closeMenu}>
+        <Link to="/" state={{ scrollTo: "about-me" }} onClick={() => setOpen(false)}>
           About Me
         </Link>
+
         <Link
           to="/"
           onClick={() => {
-            closeMenu();
-            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+            setOpen(false);
+            window.scrollTo({
+              top: scrollToBottom,
+              behavior: "smooth",
+            });
           }}
         >
           Contact

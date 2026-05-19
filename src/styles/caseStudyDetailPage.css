@@ -18,6 +18,8 @@
     "head"
     "content";
   min-height: 0; /* CRITICAL for scroll */
+  /* height to match side menu height */
+  height: calc(100vh - var(--nav-height));
   max-height: calc(100vh - var(--nav-height));
 }
 /* Simple Header */

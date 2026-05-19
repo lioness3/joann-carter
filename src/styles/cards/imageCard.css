@@ -39,9 +39,20 @@
 }
 @media (max-width: 969px) {
   .image-card-scroll-indicator {
-    font-size: 0.75rem;
+    display: none;
   }
   .image-card-caption {
     font-size: 0.7rem;
+  }
+  .multiple {
+    flex-direction: column;
+  }
+  .image-card-item {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .image-card-item img {
+    width: 100%;
+    height: auto;
   }
 }
