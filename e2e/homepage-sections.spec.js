@@ -11,6 +11,7 @@ test.describe("Homepage Sections", () => {
       "my-process",
       "resume-section",
       "about-me",
+      "contact-me",
     ];
 
     for (const sectionId of sections) {

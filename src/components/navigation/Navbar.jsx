@@ -15,7 +15,7 @@ function Navbar() {
       if (navRef.current) {
         document.documentElement.style.setProperty(
           "--nav-height",
-          `${navRef.current.offsetHeight}px`
+          `${navRef.current.offsetHeight}px`,
         );
       }
     };
@@ -57,15 +57,7 @@ function Navbar() {
           About Me
         </Link>
 
-        <Link
-          to="/"
-          onClick={() =>
-            window.scrollTo({
-              top: document.body.scrollHeight,
-              behavior: "smooth",
-            })
-          }
-        >
+        <Link to="/" state={{ scrollTo: "contact-me" }}>
           Contact
         </Link>
       </div>

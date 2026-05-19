@@ -18,29 +18,40 @@ export default function GlobalMobileMenu({ open, setOpen }) {
           ×
         </button>
 
-        <Link to="/" state={{ scrollTo: "case-studies" }} onClick={() => setOpen(false)}>
+        <Link
+          to="/"
+          state={{ scrollTo: "case-studies" }}
+          onClick={() => setOpen(false)}
+        >
           Case Studies
         </Link>
 
-        <Link to="/" state={{ scrollTo: "my-process" }} onClick={() => setOpen(false)}>
+        <Link
+          to="/"
+          state={{ scrollTo: "my-process" }}
+          onClick={() => setOpen(false)}
+        >
           My Process
         </Link>
-        <Link to="/" state={{ scrollTo: "resume-section" }} onClick={() => setOpen(false)}>
+        <Link
+          to="/"
+          state={{ scrollTo: "resume-section" }}
+          onClick={() => setOpen(false)}
+        >
           Resume
         </Link>
-        <Link to="/" state={{ scrollTo: "about-me" }} onClick={() => setOpen(false)}>
+        <Link
+          to="/"
+          state={{ scrollTo: "about-me" }}
+          onClick={() => setOpen(false)}
+        >
           About Me
         </Link>
 
         <Link
           to="/"
-          onClick={() => {
-            setOpen(false);
-            window.scrollTo({
-              top: scrollToBottom,
-              behavior: "smooth",
-            });
-          }}
+          state={{ scrollTo: "contact-me" }}
+          onClick={() => setOpen(false)}
         >
           Contact
         </Link>

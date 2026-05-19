@@ -8,7 +8,10 @@
     var(--section-padding-bottom) / 2
   ); /* use half the original section padding */
 }
-
+/* so the section lines up at the correct y- axis when clicking on link to section */
+#contact-me {
+  scroll-margin-top: var(--scroll-margin-top);
+}
 .contact-section {
   text-align: center;
   display: flex;

@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container">
+    <section className="contact-container" id="contact-me">
       <div className="contact-section">
         <Button
           classN="contact-btn"
@@ -65,7 +65,7 @@ const Contact = () => {
           primary={true}
         />
       </div>
-    </div>
+    </section>
   );
 };
 
