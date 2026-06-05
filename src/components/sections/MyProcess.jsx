@@ -1,6 +1,7 @@
 import personaMock from "../../assets/images/persona-mockup.png";
 import lowFi from "../../assets/images/low-fi-mockup.png";
 import highFi from "../../assets/images/hi-fi-mockup.png";
+import uxWheel from "../../assets/images/ux_process_wheel.svg";
 import developmentMockup from "../../assets/images/development-iMac-24-inch.png";
 import "../../styles/sections/myProcess.css";
 // This section explains my dersign process and uses a igag display pattern
@@ -8,9 +9,9 @@ export default function MyProcess() {
   return (
     <section id="my-process" className="process-wrapper">
       <div className="process-section">
-        <h4>
-          Listen &gt; Research &gt; Ideate &gt; Prototype &gt; Test &gt; Iterate
-        </h4>
+        <div className="process-image-container">
+          <img src={uxWheel} alt="Ux process wheel." />
+        </div>
       </div>
       <div className="process-section">
         <div className="process-text-container">
