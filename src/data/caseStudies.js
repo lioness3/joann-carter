@@ -164,7 +164,7 @@ export const caseStudies = [
         title: "Persona",
         icon: personaIcon,
         images: [personaCampStore],
-        imageDescriptions: ["Persona Card Created By Joann Carter"],
+        imageDescriptions: ["Persona Card Created by Joann Carter"],
       },
       wireframes: {
         type: "image",
