@@ -19,7 +19,7 @@ export default function FinalDesignCard({
           <Button
             btnText={btnText}
             link={link}
-            primary={false}
+            variant="secondary"
             classN="final-design-btn"
           />
         )}

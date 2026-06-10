@@ -30,7 +30,7 @@ export default function OverviewCard({
           classN="sourcecode_btn"
           icon={<FaGithub />}
           btnText="View the Source Code"
-          primary={false}
+          variant="secondary"
           link={sourceCode}
         />
       )}

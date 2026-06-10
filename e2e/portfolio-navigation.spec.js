@@ -15,12 +15,9 @@ test.describe("Portfolio Navigation", () => {
   });
 
   test("navigation links scroll to correct sections", async ({ page }) => {
-    // Click on "Case Studies" link
-    await page.locator('a:has-text("Case Studies")').first().click();
-    await page.waitForTimeout(1000); // Wait for smooth scroll
-
-    // Verify case studies section is in view
-    await expect(page.locator(".case-wrapper")).toBeVisible();
+    await page.locator('.nav-bar-menu-items a:has-text("Case Studies")').click();
+    await page.waitForTimeout(1000);
+    await expect(page.locator(".case-study-card").first()).toBeInViewport();
   });
 
   test("hamburger menu opens on mobile", async ({ page }) => {

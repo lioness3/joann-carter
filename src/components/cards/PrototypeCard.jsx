@@ -12,7 +12,7 @@ export default function PrototypeCard({ image, link, btnText, description }) {
             icon={null}
             onClick={null}
             btnText={btnText}
-            primary={false}
+            variant="secondary"
             link={link}
           />
         )}

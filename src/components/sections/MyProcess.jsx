@@ -59,9 +59,9 @@ export default function MyProcess() {
           <p className="process-text">
             I study competitors to understand what
             <span className="process-bold-word"> works well </span>and
-            <span className="process-bold-word"> what doesnt</span>. This helps
-            me keep things intuitive while also discovering opportunities in the
-            gaps I find.
+            <span className="process-bold-word"> what does not</span>. This
+            helps me keep things intuitive while also discovering opportunities
+            in the gaps I find.
           </p>
         </div>
         <div className="process-image-container">

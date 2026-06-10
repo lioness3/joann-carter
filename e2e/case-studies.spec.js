@@ -39,7 +39,7 @@ test.describe("Case Studies", () => {
     await expect(page).toHaveURL(/\/case-study\/\d+/);
 
     // Case study detail content should be visible
-    await expect(page.locator(".case-study-detail-header")).toBeVisible();
+    await expect(page.locator(".case-study-simple-header")).toBeVisible();
   });
 
   test("case study detail page displays navigation menu", async ({ page }) => {
