@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import RobotAnimation from "../components/RobotAnimation";
+import robot from "../assets/images/error-robot.jpg";
 import Button from "../components/Button";
 import "../styles/errorPage.css";
 
@@ -15,7 +15,7 @@ export default function ErrorPage({ code = 404 }) {
 
   return (
     <div className="error-page">
-      <RobotAnimation />
+      <img src={robot} alt="Error robot" className="error-robot" />
       <h1 className="error-code">{code}</h1>
       <p className="error-message">{heading}</p>
       <p className="error-sub">{sub}</p>

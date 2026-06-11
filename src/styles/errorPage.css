@@ -33,93 +33,10 @@ html[data-theme="dark"] .error-code {
   margin: 0.5rem 0 2rem;
 }
 
-.error-robot-svg {
+.error-robot {
   width: 220px;
   height: auto;
   margin-bottom: 2.5rem;
-  animation: robot-float 6s ease-in-out infinite;
-  overflow: visible;
-}
-
-@keyframes robot-float {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-14px); }
-  100% { transform: translateY(0); }
-}
-
-
-/* Left arm — waves from horizontal out to raised toward head */
-.robot-left-arm {
-  transform-box: view-box;
-  transform-origin: 70px 182px;
-  animation: left-arm-wave 1.6s ease-in-out infinite;
-}
-
-@keyframes left-arm-wave {
-  0%   { transform: rotate(40deg); }
-  50%  { transform: rotate(73deg); }
-  100% { transform: rotate(40deg); }
-}
-
-/* Right arm — waves from horizontal out to raised toward head */
-.robot-right-arm {
-  transform-box: view-box;
-  transform-origin: 230px 182px;
-  animation: right-arm-wave 1.6s ease-in-out infinite;
-}
-
-@keyframes right-arm-wave {
-  0%   { transform: rotate(-40deg); }
-  50%  { transform: rotate(-73deg); }
-  100% { transform: rotate(-40deg); }
-}
-
-/* Head turns left and right */
-.robot-head {
-  transform-box: view-box;
-  transform-origin: 150px 138px;
-  animation: head-turn 2.4s ease-in-out infinite;
-}
-
-@keyframes head-turn {
-  0%   { transform: rotate(0deg); }
-  50%  { transform: rotate(8deg); }
-  100% { transform: rotate(0deg); }
-}
-
-/* Antenna wobble — slow */
-.robot-antenna {
-  transform-box: view-box;
-  transform-origin: 118px 92px;
-  animation: antenna-wobble 4s ease-in-out infinite;
-}
-
-@keyframes antenna-wobble {
-  0%   { transform: rotate(0deg); }
-  25%  { transform: rotate(10deg); }
-  75%  { transform: rotate(-10deg); }
-  100% { transform: rotate(0deg); }
-}
-
-/* Floating question marks — drift farther up */
-.robot-q1 {
-  animation: q-float1 2.2s ease-in-out infinite;
-}
-
-.robot-q2 {
-  animation: q-float2 2.8s ease-in-out infinite;
-}
-
-@keyframes q-float1 {
-  0%   { transform: translateY(0);    opacity: 1; }
-  50%  { transform: translateY(-38px); opacity: 0.3; }
-  100% { transform: translateY(0);    opacity: 1; }
-}
-
-@keyframes q-float2 {
-  0%   { transform: translateY(0);    opacity: 1; }
-  50%  { transform: translateY(-30px); opacity: 0.25; }
-  100% { transform: translateY(0);    opacity: 1; }
 }
 
 @media (max-width: 969px) {
@@ -127,7 +44,7 @@ html[data-theme="dark"] .error-code {
     font-size: 5rem;
   }
 
-  .error-robot-svg {
+  .error-robot {
     width: 160px;
   }
 }
