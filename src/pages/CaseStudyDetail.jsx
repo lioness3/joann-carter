@@ -19,6 +19,11 @@ function CaseStudyDetail({ studies }) {
   const suppressObserverRef = useRef(false);
   const suppressTimeoutRef = useRef(null);
 
+  useEffect(() => {
+    if (study) document.title = `${study.title} | Joann Carter`;
+    return () => { document.title = "Joann Carter | UX Designer"; };
+  }, [study]);
+
   // RESETS THE SCROLL POSITION WHEN THE CASE STUDY CHANGES
   useEffect(() => {
     if (scrollRef.current) {
