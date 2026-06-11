@@ -6,18 +6,13 @@ import InfoCard from "../components/cards/InfoCard";
 import CaseStudySideMenu from "../components/navigation/CaseStudySideMenu";
 import CaseStudyContentsMenu from "../components/navigation/CaseStudyContentsMenu";
 import Button from "../components/Button";
+import ErrorPage from "./ErrorPage";
 import "../styles/caseStudyDetailPage.css";
 
 function CaseStudyDetail({ studies }) {
   const { id } = useParams();
   const study = studies.find((s, idx) => String(idx) === id);
   const [contentsOpen, setContentsOpen] = useState(false);
-
-  const categories = study.categories;
-  const caseStudyInfo = Object.entries(categories);
-  // color palette of the case study used for block coloring on some info cards
-  const colorPalette = study.palette;
-
   const [activeId, setActiveId] = useState(null);
   const observer = useRef(null);
   const scrollRef = useRef(null);
@@ -87,7 +82,12 @@ function CaseStudyDetail({ studies }) {
   };
 
   // Error handling for lost case study data
-  if (!study) return <div>Case study not found.</div>;
+  if (!study) return <ErrorPage code={404} />;
+
+  const categories = study.categories;
+  const caseStudyInfo = Object.entries(categories);
+  // color palette of the case study used for block coloring on some info cards
+  const colorPalette = study.palette;
 
   return (
     <div className="case-study-detail-layout">
