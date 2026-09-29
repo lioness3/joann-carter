@@ -70,34 +70,32 @@
   color: var(--text-70);
   margin: 0;
 }
-.featured-container {
+/* FEATURED CARD - gold accent is reserved for featured work (buttons use --primary) */
+.case-study-card.featured {
+  outline: 2px solid var(--featured);
+  outline-offset: 3px;
+}
+.featured-label {
   position: absolute;
-  top: 0;
-  right: 0;
-  margin: 20px;
+  top: 1rem;
+  left: 1rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  background: var(--featured);
+  color: var(--featured-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .featured-star {
-  max-width: 30px;
-  opacity: 1;
-  animation: twinkle 1.8s infinite ease-in-out;
-  transform-origin: center;
-}
-@keyframes twinkle {
-  0% {
-    opacity: 0.4;
-    transform: scale(0.9) rotate(0deg);
-    filter: brightness(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.15) rotate(10deg);
-    filter: brightness(1.4);
-  }
-  100% {
-    opacity: 0.4;
-    transform: scale(0.9) rotate(0deg);
-    filter: brightness(1);
-  }
+  width: 0.9em;
+  height: 0.9em;
+  fill: currentColor;
 }
 
 @media (max-width: 969px) {

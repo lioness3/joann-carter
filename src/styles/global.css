@@ -11,6 +11,10 @@ GLOBAL STYLE SHEET  */
   --primary: #e3549d;
   --secondary: #112a55;
 
+  /* LIGHT MODE - Featured accent (gold, not used by buttons) */
+  --featured: #f5b942;
+  --featured-text: #3d2a00;
+
   /* LIGHT MODE - Backgrounds */
   --mainBg: #ffffff;
   --offWhite: #f7f7f8;
@@ -115,6 +119,10 @@ html[data-theme="dark"] {
   --box-shadow-deep: 0 12px 24px rgba(0, 0, 0, 0.6);
   --box-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.5);
   --box-shadow-selected: 0 3px 3px rgba(0, 0, 0, 0.5);
+
+  /* DARK MODE - Featured accent */
+  --featured: #f5b942;
+  --featured-text: #2a1c00;
 
   /* DARK MODE - Button hover color */
   --btn-hover: #ff7ab6;

@@ -58,6 +58,26 @@
   color: var(--primary);
   cursor: pointer;
 }
+/* Intro call to action for link to figma: button stacked above the text */
+
+.process-cta {
+  padding: 0rem 0rem 5rem;
+}
+.process-cta .process-text {
+  font-size: 0.85rem;
+  max-width: 30vw;
+  padding: 0;
+}
+.process-cta .process-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.process-cta .process-text-container img {
+  max-width: 40vw;
+  border-radius: 50%;
+  padding-bottom: 5rem;
+}
 
 /* ⭐ Mobile layout */
 @media (max-width: 969px) {
@@ -65,6 +85,10 @@
   .process-section:nth-child(even) {
     flex-direction: column;
     text-align: center;
+  }
+  /* center the 700px-max text column in the stacked layout */
+  .process-text-container {
+    margin: 0 auto;
   }
   .process-text-container h2 {
     margin-bottom: 0;

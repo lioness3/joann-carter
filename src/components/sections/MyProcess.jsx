@@ -1,17 +1,39 @@
 import personaMock from "../../assets/images/persona-mockup.png";
 import lowFi from "../../assets/images/low-fi-mockup.png";
 import highFi from "../../assets/images/hi-fi-mockup.png";
-import uxWheel from "../../assets/images/ux_process_wheel.svg";
+import uxCycle from "../../assets/images/design_cycle.png";
 import developmentMockup from "../../assets/images/development-iMac-24-inch.png";
 import empathize from "../../assets/images/empathize.png";
 import analyzingCompetitors from "../../assets/images/analyzingCompetitors.png";
 import "../../styles/sections/myProcess.css";
-// This section explains my dersign process and uses a igag display pattern
+import Button from "../Button";
+// This section explains my design process and uses a igag display pattern
 export default function MyProcess() {
   return (
     <section id="my-process" className="process-wrapper">
-      <div className="process-section process-wheel">
-        <img src={uxWheel} alt="UX process wheel." />
+      {/* Intro call to action: centered */}
+      <div className="process-section process-cta">
+        <div className="process-text-container">
+          <img
+            src={uxCycle}
+            alt="Illustration of the design cycle in the UX design process."
+          />
+          <Button
+            icon={null}
+            onClick={null}
+            btnText="View My Process Timeline"
+            variant="secondary"
+            link="https://www.figma.com/design/Nx5d5BMkTyRCxPRHQhE54D/Dine-or-Ditch?node-id=0-1&t=h8akLGDqkMIhD1wn-1"
+          />
+          <p className="process-text">
+            Follow a real life example of my design process from
+            <span className="process-bold-word">
+              {" "}
+              an idea to a finished design,{" "}
+            </span>{" "}
+            with each step documented in Figma.
+          </p>
+        </div>
       </div>
       <div className="process-section">
         <div className="process-text-container">

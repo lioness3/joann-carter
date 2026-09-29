@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/sections/caseStudies.css";
-import Tooltip from "../Tooltip";
-import featuredStar from "../../assets/images/star.png";
 const CaseStudyCard = ({
   mainImage,
   bgColor,
@@ -18,7 +16,7 @@ const CaseStudyCard = ({
       style={{ textDecoration: "none" }}
     >
       <div
-        className="case-study-card"
+        className={`case-study-card${featured ? " featured" : ""}`}
         style={{
           backgroundImage: `url(${mainImage})`,
           backgroundColor: bgColor,
@@ -27,14 +25,18 @@ const CaseStudyCard = ({
           backgroundPosition: "center",
         }}
       >
-        {/* 
-       Display a star on one case study card that is featured */}
+        {/* Label on the featured case study card */}
         {featured && (
-          <div className="featured-container">
-            <Tooltip label="Featured Item" position="left">
-              <img className="featured-star" src={featuredStar} alt="star" />
-            </Tooltip>
-          </div>
+          <span className="featured-label">
+            <svg
+              className="featured-star"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95L12 2.5z" />
+            </svg>
+            Featured
+          </span>
         )}
         <div style={{ background: bgColor }}>
           <div className="case-study-banner">
