@@ -44,12 +44,21 @@ import OHC_final2 from "../assets/images/OHC/OHC_Final2.png";
 
 // DINE OR DITCH
 import dineOrDitchImg from "../assets/images/dineorditch.png";
-import dineOrDitchMockUp from "../assets/images/DineOrDitch/mockup_dineOrDitch.png";
+import dineOrDitchMockUp from "../assets/images/DineOrDitch/dineMockUp.png";
 import DineConstructionImg from "../assets/images/DineOrDitch/DineOrDitch_construction.png";
 import doubleDine from "../assets/images/DineOrDitch/doubleMockUpDIne.png";
 import dinePersona from "../assets/images/DineOrDitch/DineorDitch_persona.jpg";
 import dineWireframe1 from "../assets/images/DineOrDitch/infoArchDine.jpg";
 import dineWireframe2 from "../assets/images/DineOrDitch/dineWireframe.jpg";
+import dineDesign from "../assets/images/DineOrDitch/dineDesign.jpg";
+import dineDesign1 from "../assets/images/DineOrDitch/dineDesign11.jpg";
+import dineDesign2 from "../assets/images/DineOrDitch/dineDesign1.jpg";
+import dineDesign3 from "../assets/images/DineOrDitch/dineDesign2.jpg";
+import dineDesign4 from "../assets/images/DineOrDitch/dineDesign3.jpg";
+import loFiDine from "../assets/images/DineOrDitch/lowfi_dine.png";
+import dineFrontMockUp from "../assets/images/DineOrDitch/dineFrontMockUp.png";
+import dineDetailsMockUp from "../assets/images/DineOrDitch/dineDetails_mockUp.png";
+
 //THERMOSTAT
 import thermostatImg from "../assets/images/thermostat.png";
 import thermostatDiagram from "../assets/images/thermostat/thermostat_diagram.png";
@@ -332,7 +341,7 @@ export const caseStudies = [
         image: doubleDine,
         role: "Lead UX Designer",
         timeline: "In Progress",
-        tools: "Figma Claude Code",
+        tools: "Figma, Claude Code",
       },
       myRole: {
         type: "text",
@@ -404,48 +413,56 @@ export const caseStudies = [
           "Information architecture and user flows were used to determine the needs for the initial wireframing.",
         imageDescriptions: ["Information Architecture into Wireframes"],
       },
-
-      //  HERE !!!!!!
       designSystem: {
         type: "image",
         title: "Design System",
         icon: designSystemIcon,
-        images: [campstoredesign1, campstoredesign2],
-        imageDescriptions: ["Example Components", "Sticker Sheet"],
+        images: [
+          dineDesign,
+          dineDesign1,
+          dineDesign2,
+          dineDesign3,
+          dineDesign4,
+        ],
+        imageDescriptions: ["Color Scheme", "Typography", "Components"],
       },
+
       prototypes: {
         type: "prototype",
         title: "Prototype",
         icon: prototypesIcon,
         description:
-          "This is the first prototype for the camp store. The bottom navigation tabs are Home, Events, Weather, and Profile. The cart is accessed from the top right of the home page.",
-        buttonText: "Lo-Fi Prototype",
-        link: "https://www.figma.com/proto/jriTfKyq2FG2ypO0JcesR7/CAMP-STORE-APP-prototype-update.1?node-id=0-1&t=NivYPPN1VYXImYGF-1",
-        images: [campstorelofi],
+          "This is the first prototype for Dine or Ditch. The bottom navigation tabs are Settings, Liked, and Ideas. The suggestions are populated by tapping the forward and back arrow buttons.",
+        buttonText: "Explore",
+        link: "https://www.figma.com/design/Nx5d5BMkTyRCxPRHQhE54D/Dine-or-Ditch?node-id=302-3974&t=oNcHJCt11mxS0f8P-1",
+        images: [loFiDine],
       },
+
+      // HEREEEEEEE
       usabilityStudies: {
         type: "usability",
         title: "Usability Studies",
         icon: usabilityStudiesIcon,
-        headline: "Two Rounds",
+        headline: "Many Rounds",
         intro:
-          "I carried out two rounds of usability studies. Insights from the first study helped guide the designs from wireframes to mockups. The second study used a high-fidelity prototype to reveal what areas needed refining.",
+          "I carried out many usability studies and interviews. I am choosing to focus on the High Fidelity prototype usability studies beacuse they are the most recent.",
         rounds: [
           {
             label: "Round 1 Findings",
-            subtitle: "Low-Fidelity Prototype",
+            subtitle: "High-Fidelity Prototype",
             items: [
-              "Users need <strong>more detail</strong> to understand the app.",
-              "Users want to <strong>navigate</strong> between event dates.",
-              "Users find the <strong>events</strong> exciting.",
+              "Users want <strong>more data</strong> to scroll through for suggestions.",
+              "Users want to <strong>navigate</strong> to more detailed hours of operation.",
+              "Users did not recognize the <strong>menu</strong> as a clickable button.",
             ],
           },
           {
             label: "Round 2 Findings",
             subtitle: "High-Fidelity Prototype",
             items: [
-              "The <strong>cart icon</strong> is confusing.",
-              "The <strong>profile tab</strong> is mislabeled.",
+              "Users are confused about the <strong>saving process</strong> on the preferences screen.",
+              "Users are curious about what restaurants have <strong>deals</strong>.",
+              "Users like to <strong>scroll between choices</strong>.",
             ],
           },
         ],
@@ -476,10 +493,10 @@ export const caseStudies = [
         type: "final design",
         title: "Final Design",
         icon: finalDesignIcon,
-        buttonText: "Final Prototype",
-        link: "https://www.figma.com/proto/jriTfKyq2FG2ypO0JcesR7/CAMP-STORE-APP-prototype-update.1?node-id=4111-257&t=NivYPPN1VYXImYGF-1",
+        buttonText: "Explore",
+        link: "https://www.figma.com/design/Nx5d5BMkTyRCxPRHQhE54D/Dine-or-Ditch?node-id=302-3974&t=oNcHJCt11mxS0f8P-1",
         buttonDescription: "View the final prototype on Figma.",
-        images: [campstorefinalDesign1, campstorefinalDesign2],
+        images: [dineFrontMockUp, dineDetailsMockUp],
       },
 
       userFeedback: {
@@ -487,8 +504,8 @@ export const caseStudies = [
         title: "User Feedback",
         icon: userFeedbackIcon,
         quotes: [
-          "'If I was at a campground with my kids, this would make things easier!'",
-          "'Simple… intuitive and easy!'",
+          "'You should be able to click on this and expand it.'",
+          "'That was EASY!'",
         ],
       },
       takeaways: {
@@ -497,7 +514,7 @@ export const caseStudies = [
         icon: takeawaysIcon,
         headline: "Realistic Content Matters",
         description:
-          "I learned that low fidelity placeholders (text blocks and wireframe image boxes) were not intuitive for the user during the initial testing phase. Realistic content is essential for accurate user feedback.",
+          "I learned that it is difficult to test an app that relies heavily on states and variables in a static prototype. I will be looking into ways to test prototypes with real data pulled from an API.",
       },
       nextSteps: {
         type: "block",
@@ -512,12 +529,12 @@ export const caseStudies = [
           {
             title: "Field Testing",
             description:
-              "Deploy the prototype at a campground to test the functionality outdoors and in real time.",
+              "Test the prototype functionality with real data in the users location.",
           },
           {
-            title: "Revenue",
+            title: "Develop",
             description:
-              "Measure increases in store sales, event participation, and user retention.",
+              "Start the development process from square one in an organized manner associated with the new design.",
           },
         ],
       },
