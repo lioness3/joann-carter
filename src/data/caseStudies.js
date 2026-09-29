@@ -46,7 +46,7 @@ import OHC_final2 from "../assets/images/OHC/OHC_Final2.png";
 import dineOrDitchImg from "../assets/images/dineorditch.png";
 import dineOrDitchMockUp from "../assets/images/DineOrDitch/dineMockUp.png";
 import DineConstructionImg from "../assets/images/DineOrDitch/DineOrDitch_construction.png";
-import doubleDine from "../assets/images/DineOrDitch/doubleMockUpDIne.png";
+import doubleDine from "../assets/images/DineOrDitch/doubleDine.png";
 import dinePersona from "../assets/images/DineOrDitch/DineorDitch_persona.jpg";
 import dineWireframe1 from "../assets/images/DineOrDitch/infoArchDine.jpg";
 import dineWireframe2 from "../assets/images/DineOrDitch/dineWireframe.jpg";
