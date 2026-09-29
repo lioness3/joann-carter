@@ -46,7 +46,10 @@ import OHC_final2 from "../assets/images/OHC/OHC_Final2.png";
 import dineOrDitchImg from "../assets/images/dineorditch.png";
 import dineOrDitchMockUp from "../assets/images/DineOrDitch/mockup_dineOrDitch.png";
 import DineConstructionImg from "../assets/images/DineOrDitch/DineOrDitch_construction.png";
-
+import doubleDine from "../assets/images/DineOrDitch/doubleMockUpDIne.png";
+import dinePersona from "../assets/images/DineOrDitch/DineorDitch_persona.jpg";
+import dineWireframe1 from "../assets/images/DineOrDitch/infoArchDine.jpg";
+import dineWireframe2 from "../assets/images/DineOrDitch/dineWireframe.jpg";
 //THERMOSTAT
 import thermostatImg from "../assets/images/thermostat.png";
 import thermostatDiagram from "../assets/images/thermostat/thermostat_diagram.png";
@@ -300,23 +303,22 @@ export const caseStudies = [
   {
     // Dine or Ditch - UX DESIGN
     mainImage: dineOrDitchMockUp,
-
-    featured: true,
+    featured: false,
     overViewIcon: bookIcon,
-    bgColor: "#8DA293",
+    bgColor: "#5da29b",
     title: "Dine or Ditch App",
     type: "UX Case Study",
     description: "UX Design",
     summary:
-      "The Camp Store app gives campers a faster, easier way to shop by letting them browse items, check product details, and place orders without waiting in line. It also keeps users informed about current inventory, special offers, and upcoming events at their campground.",
-    catchPhrase: "Camp More, Stress Less!",
-    timeline: "4 Months",
-    tools: "Figma",
+      "Dine or Ditch is a mobile app that helps users decide where to eat. Users can set preferences to tailer their search by their tastes and dietary needs, browse nearby restaurants, read reviews, and make reservations directly through the app.",
+    catchPhrase: "Your Next Meal, Simplified.",
+    timeline: "In Progress",
+    tools: "Figma, Claude Code",
     palette: [
-      "rgba(217, 199, 162, 0.1)",
-      "rgba(230, 126, 34, 0.1)",
-      "rgba(46, 83, 57, 0.1)",
-      "rgba(0, 0, 0, 0.1)",
+      "rgba(20, 160, 147, 0.1)", // teal
+      "rgba(245, 165, 36, 0.1)", // orange
+      "rgba(106, 117, 117, 0.1)", // slate grey
+      "rgba(18, 63, 59, 0.1)", // dark teal
     ],
 
     categories: {
@@ -324,45 +326,45 @@ export const caseStudies = [
         type: "overview",
         title: "Overview",
         icon: bookIcon,
-        catchPhrase: "Camp More, Stress Less!",
+        catchPhrase: "Your Next Meal, Simplified.",
         summary:
-          "The Camp Store app gives campers a faster, easier way to shop by letting them browse items, check product details, and place orders without waiting in line. It also keeps users informed about current inventory, special offers, and upcoming events at their campground.",
-        image: campstoreHeaderImg,
+          "Dine or Ditch is a mobile app that helps users decide where to eat. Users can set preferences to tailer their search by their tastes and dietary needs, browse nearby restaurants, read reviews, and make reservations directly through the app.",
+        image: doubleDine,
         role: "Lead UX Designer",
-        timeline: "4 Months",
-        tools: "Figma",
+        timeline: "In Progress",
+        tools: "Figma Claude Code",
       },
       myRole: {
         type: "text",
         title: "My Role",
         icon: roleIcon,
-        headline: "Lead UX Designer",
+        headline: "Lead UX Designer & Engineer",
         description:
-          "I was the Lead UX Designer for this project. I guided the design process from early research to polished prototypes. My work included conducting user research, shaping user stories, organizing the information architecture, and creating wireframes and high-fidelity designs in Figma.",
+          "I was the Lead UX Designer for this project. I guided the design process from early research to polished prototypes. My work included conducting user research, shaping user stories, organizing the information architecture, and creating wireframes and high-fidelity designs in Figma. I am currently working on the development and deployment of the app.",
       },
       problem: {
         type: "text",
         title: "Problem",
         icon: problemIcon,
-        headline: "Waiting Instead of Relaxing",
+        headline: "Too Hungry to Decide",
         description:
-          "Campers often face long lines at the camp store, which takes time away from relaxing and enjoying nature. The lack of a convenient ordering system creates frustration and disrupts the overall camping experience.",
+          "When users are hangry, they dont want to scroll through endless restaurant options. They need a quick, simple way to find somewhere to eat that fits what they're in the mood for.",
       },
       goal: {
         type: "text",
         title: "Goal",
         icon: goalIcon,
-        headline: "Create an Accessible App",
+        headline: "From Hangry to Happy",
         description:
-          "Create a mobile app that enables campers to place store orders ahead of time and access campground event information directly from their phones. More time for s’mores, less time in line.",
+          "Help hungry users quickly discover restaurant options that fit their needs, preferences, and location, making it easier to choose where to eat.",
       },
       userResearch: {
         type: "text",
         title: "User Research",
         icon: researchIcon,
-        headline: "Reduce Bias",
+        headline: "Understanding What Makes Choosing Difficult",
         description:
-          "After living in a campground for a summer, I developed two user personas based on real people I met there. I intentionally included underrepresented demographics to reduce bias and reflect a broader range of abilities and perspectives. \n\nThese personas informed a focused, moderated usability study with five participants ages 30–75, including an individual with a motor function impairment. The study aimed to quickly validate the low-fidelity prototype’s ordering process while collecting insights tied to key business metrics: increasing sales and event attendance while reducing delivery time.",
+          "Interviewing users and auditing competitors of existing restaurant and dining apps revealed several opportunities. Users have different needs when deciding where to eat, from finding convenient options nearby to considering atmosphere, dietary restrictions, group size, and personal preferences. Reviewing how competing apps approach restaurant discovery helped identify gaps and opportunities to create a simpler, more personalized way to make the decision.",
       },
       painPoints: {
         type: "block",
@@ -370,23 +372,19 @@ export const caseStudies = [
         icon: painPointsIcon,
         items: [
           {
-            title: "Live Inventory",
+            title: "Decision Paralysis",
             description:
-              "Campers can not see whether items are in stock before hiking to the store.",
+              "Users feel overwhelmed by too many restaurant options and struggle to make a decision quickly.",
           },
           {
-            title: "Pick Up Orders",
+            title: "Repetitive Habits",
             description:
-              "Campers must visit the store multiple times to check if orders are ready.",
+              "Users fall into repetitive dining habits due to lack of confidence in finding new places that fit their preferences.",
           },
           {
-            title: "Long Lines",
-            description: "Checkout lines grow during peak hours.",
-          },
-          {
-            title: "Tiny Labels",
+            title: "Missing Out",
             description:
-              "Small text and unclear pricing make products diffiuclt to read.",
+              "Users miss out on special deals near them due to lack of knowledge.",
           },
         ],
       },
@@ -394,23 +392,20 @@ export const caseStudies = [
         type: "image",
         title: "Persona",
         icon: personaIcon,
-        images: [personaCampStore],
-        imageDescriptions: ["Persona Card Created by Joann Carter"],
+        images: [dinePersona],
+        imageDescriptions: ["Persona Card Created with the help of AI"],
       },
       wireframes: {
         type: "image",
         title: "Wireframes",
         icon: wireframesIcon,
-        images: [
-          campstoreWireframe1,
-          campstoreWireframe2,
-          campstoreWireframe3,
-          campstoreWireframe4,
-        ],
+        images: [dineWireframe1, dineWireframe2],
         imagesIntro:
-          "Paper sketches were translated into digital wireframes to define the structure of the ordering flow and event browsing experience.",
-        imageDescriptions: ["Responsive Wireframes"],
+          "Information architecture and user flows were used to determine the needs for the initial wireframing.",
+        imageDescriptions: ["Information Architecture into Wireframes"],
       },
+
+      //  HERE !!!!!!
       designSystem: {
         type: "image",
         title: "Design System",
