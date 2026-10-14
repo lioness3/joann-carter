@@ -43,10 +43,66 @@
         } catch (e) {}
       })();
     </script>
-    <script type="module" crossorigin src="/assets/index-C44BB8xB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-G5kmuVYj.css">
+    <!-- PRELOAD splash colors match GLOBAL.CSS, shown until REACT mounts -->
+    <style>
+      html { background: #ffffff; }
+      html[data-theme="dark"] { background: #2d3543; }
+      .preload {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        font-family: system-ui, sans-serif;
+        color: #112a55;
+      }
+      html[data-theme="dark"] .preload { color: #e6eef6; }
+      .preload-name { font-size: 1.75rem; font-weight: 700; margin: 0; line-height: 1.2; }
+      .preload-role { font-size: 1rem; margin: 0; line-height: 1.2; color: #e3549d; }
+      /* WRAP sizes the BAR to match the ROLE text width */
+      .preload-role-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: fit-content;
+      }
+      .preload-bar {
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        overflow: hidden;
+        background: rgba(227, 84, 157, 0.15);
+      }
+      /* FILL grows left to right and FADES toward the right end */
+      .preload-bar::after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 0;
+        background: linear-gradient(90deg, #e3549d, rgba(227, 84, 157, 0));
+        animation: preload-fill 1.4s ease-in-out infinite;
+      }
+      @keyframes preload-fill {
+        to { width: 100%; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .preload-bar::after { animation: none; width: 100%; }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-CzsQaZHM.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CKL6gApo.css">
   </head>
   <body>
-    <div id="root"></div>
+    <!-- REACT replaces this PRELOAD content when ROOT mounts -->
+    <div id="root">
+      <div class="preload" role="status" aria-label="Loading">
+        <h1 class="preload-name">Joann Carter</h1>
+        <div class="preload-role-wrap">
+          <p class="preload-role">UX Designer &amp; Engineer</p>
+          <div class="preload-bar"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
