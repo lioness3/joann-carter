@@ -1,13 +1,14 @@
 /* CUSTOM PRIMARY BUTTON */
 .custom-primary-button {
   background: var(--primary);
-  color: #fff;
+  color: var(--white);
   border: none;
   border-radius: var(--btnBorderRadius);
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background var(--duration-fast);
   padding: 1rem 3rem;
+  text-decoration: none; /* removes underline when rendered as ANCHOR */
 
   display: flex;
   align-items: center;
@@ -39,7 +40,7 @@
   border-radius: var(--btnBorderRadius);
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background var(--duration-fast);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,13 +55,13 @@
 /* CUSTOM SECONDARY BUTTON-outline style */
 
 .custom-secondary-button {
-  background: white;
+  background: var(--white);
   color: var(--primary);
   border: 1px solid var(--primary);
   border-radius: var(--btnBorderRadius);
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background var(--duration-fast);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,11 +74,12 @@
   background-color: rgb(from var(--primary) r g b / 0.1);
 }
 
-/* HERO BUTTON - view my work */
+/* HERO BUTTON - view design process */
 .btn-cta {
   margin-left: auto;
   margin-right: auto;
-  font-weight: bold;
+  font-weight: var(--weight-bold);
+  max-width: 300px;
 }
 
 /* SOURCE CODE BUTTON IN CASESTUDY DETAILS HEADER */

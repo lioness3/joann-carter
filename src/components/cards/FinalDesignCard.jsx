@@ -1,3 +1,4 @@
+import LoadingImage from "../LoadingImage";
 import "../../styles/cards/finalDesignCard.css";
 import Button from "../Button";
 
@@ -11,7 +12,7 @@ export default function FinalDesignCard({
     <section className="final-design-card">
       <div className="final-design-images">
         {images.map((img, i) => (
-          <img key={i} src={img} alt={` screen ${i + 1}`} />
+          <LoadingImage key={i} src={img} alt={` screen ${i + 1}`} />
         ))}
       </div>
       <div className="final-design-bottom">

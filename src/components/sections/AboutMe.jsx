@@ -1,3 +1,4 @@
+import LoadingImage from "../LoadingImage";
 import portraitImage from "../../assets/images/portrait.jpeg";
 import "../../styles/sections/aboutMe.css";
 export default function AboutMe() {
@@ -9,7 +10,7 @@ export default function AboutMe() {
         </h2>
 
         <div className="about-image">
-          <img src={portraitImage} alt="Portrait of Joann" />
+          <LoadingImage src={portraitImage} alt="Portrait of Joann" />
         </div>
       </div>
       <p className="about-description">

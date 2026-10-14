@@ -2,14 +2,14 @@
 .contents-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   pointer-events: none;
-  transition: background 0.3s ease;
+  transition: background var(--duration-base) ease;
 }
 
 /* dulls background of contents menu */
 .contents-overlay.open {
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--overlay);
   pointer-events: auto;
 }
 /* slide-out panel */
@@ -22,7 +22,7 @@
   height: calc(100vh - var(--nav-height));
   background: var(--offWhite);
   transform: translateX(-100%);
-  transition: transform 0.35s ease;
+  transition: transform var(--duration-slow) ease;
   padding: 2rem 1.5rem;
   z-index: 1000;
 }
@@ -44,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease;
+  transition: color var(--duration-fast) ease;
   margin-bottom: 1rem;
 }
 

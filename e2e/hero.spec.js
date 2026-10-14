@@ -21,17 +21,15 @@ test.describe("Hero Section", () => {
     expect(naturalWidth).toBeGreaterThan(0);
   });
 
-  test("View My Work CTA button is visible", async ({ page }) => {
+  test("CTA button is visible", async ({ page }) => {
     const cta = page.locator(".btn-cta");
     await expect(cta).toBeVisible();
-    await expect(cta).toContainText("View My Work");
+    await expect(cta).toContainText("View My Design Process");
   });
 
-  test("View My Work button scrolls page down toward case studies", async ({ page }) => {
-    const scrollBefore = await page.evaluate(() => window.scrollY);
-    await page.locator(".btn-cta").click();
-    await page.waitForTimeout(800);
-    const scrollAfter = await page.evaluate(() => window.scrollY);
-    expect(scrollAfter).toBeGreaterThan(scrollBefore);
+  test("CTA links to the Figma design process in a new tab", async ({ page }) => {
+    const cta = page.locator(".btn-cta");
+    await expect(cta).toHaveAttribute("href", /figma\.com/);
+    await expect(cta).toHaveAttribute("target", "_blank");
   });
 });

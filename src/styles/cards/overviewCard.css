@@ -10,7 +10,7 @@
   margin-bottom: 0.5rem;
 }
 .overview-label {
-  font-weight: bold;
+  font-weight: var(--weight-bold);
   color: var(--text-80);
 }
 

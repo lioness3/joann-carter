@@ -33,7 +33,7 @@
 .nav-bar a {
   flex: 1;
   color: var(--text-80);
-  font-weight: bold;
+  font-weight: var(--weight-bold);
 }
 .nav-bar a:hover {
   color: var(--primary);
@@ -48,7 +48,7 @@
 .theme-toggle {
   background: none;
   border: 1px solid var(--border-secondary);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 1rem;
   cursor: pointer;
   color: var(--text);
@@ -57,6 +57,11 @@
 }
 .theme-toggle:hover {
   background-color: var(--offWhite);
+}
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .hamburger-btn,
 .hamburger-btn img {
@@ -67,7 +72,9 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0.25rem 0;
+    padding: 0.75rem 0;
+    /* AUTO lets PADDING set the height, NAVBAR.JSX syncs it to NAV-HEIGHT */
+    height: auto;
   }
   .nav-bar-menu-items {
     display: none;

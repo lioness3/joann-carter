@@ -10,7 +10,7 @@ function getInitialTheme() {
     ) {
       return "dark";
     }
-  } catch (e) {
+  } catch {
     /* ignore */
   }
   return "light";
@@ -19,7 +19,9 @@ function getInitialTheme() {
 function applyTheme(theme) {
   try {
     document.documentElement.setAttribute("data-theme", theme);
-  } catch (e) {}
+  } catch {
+    /* ignore */
+  }
 }
 
 export default function ThemeToggle() {
@@ -29,7 +31,9 @@ export default function ThemeToggle() {
     applyTheme(theme);
     try {
       localStorage.setItem("theme", theme);
-    } catch (e) {}
+    } catch {
+    /* ignore */
+  }
   }, [theme]);
 
   const toggle = () => setTheme((t) => (t === "dark" ? "light" : "dark"));

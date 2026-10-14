@@ -20,7 +20,7 @@
 }
 .about-quote {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: var(--weight-bold);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   max-width: 30%;
@@ -61,7 +61,7 @@
     /* 100 pixels less than the max size of the portrait image */
     max-width: 300px;
     margin: 0;
-    color: white;
+    color: var(--white);
   }
 
   .about-image {

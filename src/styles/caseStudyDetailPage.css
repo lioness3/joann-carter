@@ -48,7 +48,7 @@
 }
 .simple-header-title {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: var(--weight-bold);
   color: var(--text-80);
   margin: 0;
 }
@@ -70,7 +70,7 @@
   cursor: pointer;
   color: var(--text-90);
   padding: 0;
-  transition: color 0.2s ease;
+  transition: color var(--duration-fast) ease;
 }
 .mobile-back-btn:hover {
   color: var(--primary);
@@ -104,7 +104,7 @@
   flex-direction: column;
   padding: 1rem;
   gap: 2rem;
-  background-color: var(--medGrey); /* here*/
+  background-color: var(--mainBg); /* matches HEADER background */
   border-right: 1px solid var(--border-secondary);
   overflow-x: hidden;
 }
@@ -140,6 +140,14 @@
   opacity: 0.75;
 }
 
+/* ICON-FILTER matches CARD-ICON, OPACITY reset keeps the same color in DARK MODE */
+.side-menu-icon {
+  filter: var(--icon-filter);
+}
+html[data-theme="dark"] .side-menu-icon {
+  opacity: 1;
+}
+
 .side-menu-text {
   line-height: 1;
 }
@@ -147,7 +155,7 @@
 .side-menu-item.active {
   background: rgba(0, 0, 0, 0.06);
   border-left: 3px solid var(--primary);
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
   color: var(--primary);
 }
 
@@ -158,8 +166,8 @@
   align-items: center;
   gap: 8px;
   transition:
-    background 0.2s,
-    color 0.2s;
+    background var(--duration-fast),
+    color var(--duration-fast);
 }
 @media (max-width: 969px) {
   .case-study-detail-layout {

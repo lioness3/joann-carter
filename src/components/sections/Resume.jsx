@@ -93,7 +93,7 @@ const Resume = () => {
             src={eduIcon}
             alt="education icon"
           />
-          <h2>Education</h2>
+          <h2 className="resume-title">Education</h2>
         </div>
         <div className="resume-item">
           <h3 className="resume-job-title">
@@ -141,7 +141,7 @@ const Resume = () => {
             src={skillsIcon}
             alt="skillset icon"
           />
-          <h2>Skills</h2>
+          <h2 className="resume-title">Skills</h2>
         </div>
         {/* FILTER BUTTONS */}
         <div className="skills-filter">

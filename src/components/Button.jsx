@@ -32,6 +32,19 @@ export default function Button({
   }
 
   if (variant === "primary") {
+    // LINK renders a real anchor with PRIMARY styling, otherwise a BUTTON
+    if (link) {
+      return (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`custom-primary-button ${classN}`}
+        >
+          {children}
+        </a>
+      );
+    }
     return (
       <button
         type="button"

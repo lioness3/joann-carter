@@ -14,16 +14,12 @@ test.describe("Homepage action buttons", () => {
     await page.goto("/");
   });
 
-  test("View My Work CTA is a button and scrolls the page down", async ({ page }) => {
+  test("hero CTA is a link that opens the Figma design process", async ({ page }) => {
     const btn = page.locator(".btn-cta");
     await expect(btn).toBeVisible();
-    // Should be a <button>, not an <a>
-    await expect(btn).toHaveRole("button");
-
-    const scrollBefore = await page.evaluate(() => window.scrollY);
-    await btn.click();
-    await page.waitForTimeout(800);
-    expect(await page.evaluate(() => window.scrollY)).toBeGreaterThan(scrollBefore);
+    await expect(btn).toHaveRole("link");
+    await expect(btn).toHaveAttribute("href", /figma\.com/);
+    await expect(btn).toHaveAttribute("target", "_blank");
   });
 
   test("contact Email Me button is visible and is a button element", async ({ page }) => {
@@ -76,7 +72,7 @@ test.describe("Link buttons render as <a> tags with valid hrefs", () => {
   // silently rendered as <button> elements and did nothing when clicked.
 
   test("View the Source Code on Thermostat is an <a> pointing to GitHub", async ({ page }) => {
-    await page.goto("/case-study/3");
+    await page.goto("/case-study/4");
     const btn = page.locator(".sourcecode_btn");
     await btn.scrollIntoViewIfNeeded();
     await expect(btn).toBeVisible();

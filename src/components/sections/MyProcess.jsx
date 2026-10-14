@@ -1,3 +1,4 @@
+import LoadingImage from "../LoadingImage";
 import personaMock from "../../assets/images/persona-mockup.png";
 import lowFi from "../../assets/images/low-fi-mockup.png";
 import highFi from "../../assets/images/hi-fi-mockup.png";
@@ -6,33 +7,32 @@ import developmentMockup from "../../assets/images/development-iMac-24-inch.png"
 import empathize from "../../assets/images/empathize.png";
 import analyzingCompetitors from "../../assets/images/analyzingCompetitors.png";
 import "../../styles/sections/myProcess.css";
-import Button from "../Button";
 // This section explains my design process and uses a igag display pattern
 export default function MyProcess() {
   return (
     <section id="my-process" className="process-wrapper">
-      {/* Intro call to action: centered */}
-      <div className="process-section process-cta">
+      <div className="process-section">
         <div className="process-text-container">
-          <img
+          <h2>Idea to Finished Design</h2>
+          <p className="process-text">
+            Follow a real life{" "}
+            <a
+              href="https://www.figma.com/design/Nx5d5BMkTyRCxPRHQhE54D/Dine-or-Ditch?node-id=0-1&t=h8akLGDqkMIhD1wn-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="process-link"
+            >
+              example
+            </a>{" "}
+            of my design process from an idea to a finished design , with each
+            step documented in Figma.
+          </p>
+        </div>
+        <div className="process-image-container">
+          <LoadingImage
             src={uxCycle}
             alt="Illustration of the design cycle in the UX design process."
           />
-          <Button
-            icon={null}
-            onClick={null}
-            btnText="View My Process Timeline"
-            variant="secondary"
-            link="https://www.figma.com/design/Nx5d5BMkTyRCxPRHQhE54D/Dine-or-Ditch?node-id=0-1&t=h8akLGDqkMIhD1wn-1"
-          />
-          <p className="process-text">
-            Follow a real life example of my design process from
-            <span className="process-bold-word">
-              {" "}
-              an idea to a finished design,{" "}
-            </span>{" "}
-            with each step documented in Figma.
-          </p>
         </div>
       </div>
       <div className="process-section">
@@ -50,7 +50,7 @@ export default function MyProcess() {
           </p>
         </div>
         <div className="process-image-container">
-          <img
+          <LoadingImage
             src={empathize}
             alt="Illustration of the empathize phase in the UX design process."
           />
@@ -71,7 +71,10 @@ export default function MyProcess() {
           </p>
         </div>
         <div className="process-image-container">
-          <img src={personaMock} alt="Mock up of a Luis the laborer persona." />
+          <LoadingImage
+            src={personaMock}
+            alt="Mock up of a Luis the laborer persona."
+          />
           <p className="img-subtext">An example of a real user story I did.</p>
         </div>
       </div>
@@ -87,7 +90,7 @@ export default function MyProcess() {
           </p>
         </div>
         <div className="process-image-container">
-          <img
+          <LoadingImage
             src={analyzingCompetitors}
             alt="Illustration of the analyzing competitors phase in the UX design process."
           />
@@ -105,7 +108,7 @@ export default function MyProcess() {
           </p>
         </div>
         <div className="process-image-container">
-          <img
+          <LoadingImage
             src={lowFi}
             alt="Mock up of a Low Fidelity Prototype from the camp store app design process."
           />
@@ -124,7 +127,7 @@ export default function MyProcess() {
           </p>
         </div>
         <div className="process-image-container">
-          <img
+          <LoadingImage
             src={highFi}
             alt="Mock up of a High Fidelity Prototype from the camp store app design process."
           />
@@ -141,8 +144,7 @@ export default function MyProcess() {
               href="https://github.com/lioness3"
               target="_blank"
               rel="noopener noreferrer"
-              className="process-bold-word"
-              id="process-github-link"
+              className="process-link"
             >
               GitHub
             </a>
@@ -151,7 +153,7 @@ export default function MyProcess() {
         </div>
 
         <div className="process-image-container">
-          <img
+          <LoadingImage
             src={developmentMockup}
             alt="Mock up of a High Fidelity Prototype from the camp store app design process."
           />

@@ -1,11 +1,6 @@
 import Hero from "../components/sections/Hero";
 import SectionTitle from "../components/SectionTitle";
 import CaseStudies from "../components/sections/CaseStudies";
-import section_caseStudyBanner from "../assets/images/sections/section_1.png";
-import section_resumeBanner from "../assets/images/sections/section_2.png";
-import section_aboutBanner from "../assets/images/sections/section_3.png";
-import section_processBanner from "../assets/images/sections/section_4.png";
-import section_contactBanner from "../assets/images/sections/section_5.png";
 
 import MyProcess from "../components/sections/MyProcess";
 import AboutMe from "../components/sections/AboutMe";
@@ -32,7 +27,7 @@ function Portfolio({ studies }) {
       // Clear state so a page reload doesn't re-trigger the scroll
       navigate(location.pathname, { replace: true, state: null });
     }
-  }, [location]);
+  }, [location, navigate]);
   return (
     <main>
       {/* HERO SECTION */}
@@ -43,14 +38,12 @@ function Portfolio({ studies }) {
         subtitle={
           "A mix of real-world and continuing education projects that I have collected over the past few years. "
         }
-        image={section_caseStudyBanner}
       />
       <CaseStudies studies={studies} />
       {/* MY PROCESS SECTION */}
       <SectionTitle
         title={"My Process"}
         subtitle={"A look into how I approach design challenges."}
-        image={section_processBanner}
       />
       <MyProcess />
       {/* RESUME SECTION */}
@@ -59,7 +52,6 @@ function Portfolio({ studies }) {
         subtitle={
           "Download my resume to learn more about my background, skills, and experience."
         }
-        image={section_resumeBanner}
       />
       <Resume />
       {/* ABOUT ME SECTION */}
@@ -68,7 +60,6 @@ function Portfolio({ studies }) {
         subtitle={
           "Learn more about my background, skills, and experience as a UX designer."
         }
-        image={section_aboutBanner}
       />
       <AboutMe />
 
@@ -76,7 +67,6 @@ function Portfolio({ studies }) {
       <SectionTitle
         title={"Contact"}
         subtitle={"Get in touch with me through email, call, or text."}
-        image={section_contactBanner}
       />
       <Contact />
       <Footer />

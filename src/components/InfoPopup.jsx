@@ -25,7 +25,7 @@ export default function InfoPopup() {
             User Experience Engineer
           </h4>
           <p className="hero-description">
-            Designing intuitive, accessible experiences that empower every user.
+            Combining logic and empathy to make technology feel intuitive.
           </p>
         </div>
       )}

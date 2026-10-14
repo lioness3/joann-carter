@@ -1,3 +1,4 @@
+import LoadingImage from "../LoadingImage";
 import "../../styles/cards/prototypeCard.css";
 import Button from "../Button";
 
@@ -5,7 +6,7 @@ export default function PrototypeCard({ image, link, btnText, description }) {
   return (
     <div className="prototype-card">
       <div className="prototype-col1">
-        <img src={image} alt="Prototype" />
+        <LoadingImage src={image} alt="Prototype" />
 
         {link && (
           <Button

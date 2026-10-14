@@ -1,3 +1,4 @@
+import LoadingImage from "../LoadingImage";
 import { useRef, useState, useEffect } from "react";
 import "../../styles/cards/imageCard.css";
 
@@ -33,7 +34,7 @@ export default function ImageCard({ images, descriptions, intro }) {
       <div ref={scrollRef} className={isSingle ? "single" : "multiple"}>
         {images.map((img, index) => (
           <figure key={index} className="image-card-item">
-            <img src={img} alt="" />
+            <LoadingImage src={img} alt="" />
             <figcaption className="image-card-caption">
               {descriptions[index] || ""}
             </figcaption>

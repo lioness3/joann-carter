@@ -10,7 +10,7 @@
   /* block cards always have a white base so text must always be dark regardless of theme */
   color: rgb(from var(--secondary) r g b / 0.8);
   /* white sits beneath the transparent palette color so it shows in both light and dark mode */
-  background-color: white;
+  background-color: var(--white);
   background-image: linear-gradient(var(--block-color), var(--block-color));
 }
 .block-card-title {
@@ -25,7 +25,7 @@
 /* FEEDBACK styling */
 
 .block-card-feedback {
-  font-weight: bold;
+  font-weight: var(--weight-bold);
   padding: 4rem 1rem;
   margin: auto;
   text-align: center;

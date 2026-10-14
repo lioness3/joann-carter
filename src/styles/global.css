@@ -11,6 +11,9 @@ GLOBAL STYLE SHEET  */
   --primary: #e3549d;
   --secondary: #112a55;
 
+  /* LIGHT MODE - ICON FILTER is neutral */
+  --icon-filter: none;
+
   /* LIGHT MODE - Featured accent (gold, not used by buttons) */
   --featured: #f5b942;
   --featured-text: #3d2a00;
@@ -59,8 +62,26 @@ GLOBAL STYLE SHEET  */
   --section-title-height: 300px;
   --section-padding-bottom: 300px;
 
+  /* TYPOGRAPHY - font stack and weights shared across the site */
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* MOTION - transition DURATION steps */
+  --duration-fast: 0.2s;
+  --duration-base: 0.3s;
+  --duration-slow: 0.35s;
+
+  /* FIXED colors, same in light and dark mode */
+  --white: #ffffff;
+  --overlay: rgba(0, 0, 0, 0.4);
+
   /* SPACING & BORDERS  */
+  --radius-xs: 2px;
+  --radius-sm: 6px;
   --borderRadius: 12px;
+  /* LETTER-SPACING shared by SECTION titles and menu buttons */
+  --letter-spacing-wide: 0.15em;
   --btnBorderRadius: 20px;
   --blockGap: 0.25rem;
   --scroll-margin-top: calc(
@@ -111,14 +132,21 @@ html[data-theme="dark"] {
   --text-60: #a2abc6; /* WCAG AA: 7.9:1 on dark bg */
   --text-50: #8b94b6; /* WCAG AA: 5.0:1 on dark bg */
 
-  /* DARK MODE- section GRADIENT (removes gradient background in dark mode) */
-  --section-gradient: var(--mainBg);
+  /* DARK MODE - section GRADIENT fades PRIMARY tint into MAINBG */
+  --section-gradient: linear-gradient(
+    to bottom,
+    rgb(from var(--primary) r g b / 0.1) 10%,
+    var(--mainBg)
+  );
 
   /* DARK MODE - Shadows (more prominent on dark backgrounds) */
   --box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
   --box-shadow-deep: 0 12px 24px rgba(0, 0, 0, 0.6);
   --box-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.5);
   --box-shadow-selected: 0 3px 3px rgba(0, 0, 0, 0.5);
+
+  /* DARK MODE - ICON FILTER lightens gray SVG icons for contrast on dark bg */
+  --icon-filter: brightness(1.4);
 
   /* DARK MODE - Featured accent */
   --featured: #f5b942;
@@ -161,7 +189,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
   line-height: 1.5;
   background-color: var(--mainBg);
   -webkit-font-smoothing: antialiased;
@@ -195,5 +223,32 @@ h1 {
     --section-title-height: max-content;
     --case-study-header-height: max-content;
     --section-padding-bottom: 100px;
+  }
+}
+
+/* IMG-LOADING shimmer placeholder, applied by LOADINGIMAGE component */
+.img-loading {
+  /* MIN-HEIGHT keeps placeholder visible before image size is known */
+  min-height: 200px;
+  background: linear-gradient(
+    90deg,
+    var(--ltGrey) 25%,
+    var(--medGrey) 50%,
+    var(--ltGrey) 75%
+  );
+  background-size: 200% 100%;
+  animation: img-shimmer 1.5s infinite linear;
+}
+
+@keyframes img-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* PREFERS-REDUCED-MOTION turns off the shimmer ANIMATION */
+@media (prefers-reduced-motion: reduce) {
+  .img-loading {
+    animation: none;
   }
 }

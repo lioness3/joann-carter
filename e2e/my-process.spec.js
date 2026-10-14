@@ -43,7 +43,7 @@ test("each process section has a visible image", async ({ page }) => {
   });
 
   test("GitHub link in Development section is present and external", async ({ page }) => {
-    const githubLink = page.locator("#process-github-link");
+    const githubLink = page.locator("#my-process a[href*=\"github.com\"]");
     await githubLink.scrollIntoViewIfNeeded();
     await expect(githubLink).toBeVisible();
     await expect(githubLink).toHaveAttribute("target", "_blank");

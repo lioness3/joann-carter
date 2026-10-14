@@ -10,13 +10,11 @@ export default function Hero() {
       <div className="hero-left">
         <h1 className="hero-name">Joann Carter</h1>
         <InfoPopup />
-
         <Button
           classN="btn-cta"
           icon={<FaArrowRight />}
-          onClick={() => (window.location.href = "#case-studies")}
-          btnText={"View My Work"}
-          primary={true}
+          link="https://www.figma.com/design/Nx5d5BMkTyRCxPRHQhE54D/Dine-or-Ditch?node-id=0-1&t=h8akLGDqkMIhD1wn-1"
+          btnText={"View My Design Process"}
         />
       </div>
 

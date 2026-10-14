@@ -31,7 +31,7 @@
 .copy-icon {
   cursor: pointer;
   color: var(--text-60);
-  transition: color 0.2s ease;
+  transition: color var(--duration-fast) ease;
 }
 
 .copy-icon:hover {

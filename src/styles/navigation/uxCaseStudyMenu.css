@@ -22,7 +22,7 @@
   gap: 12px;
   text-decoration: none;
   color: var(--text-90);
-  font-weight: bold;
+  font-weight: var(--weight-bold);
 }
 
 .ux-case-study-menu-link:hover {
@@ -35,10 +35,18 @@
   opacity: 0.8;
 }
 
+/* ICON-FILTER matches CARD-ICON, OPACITY reset keeps the same color in DARK MODE */
+.ux-case-study-menu-icon {
+  filter: var(--icon-filter);
+}
+html[data-theme="dark"] .ux-case-study-menu-icon {
+  opacity: 1;
+}
+
 .ux-case-study-menu-back {
   padding: 1rem 2rem;
   color: var(--text-90);
-  font-weight: bold;
+  font-weight: var(--weight-bold);
   text-decoration: none;
   background: var(--bg);
   border-top: 1px solid var(--border-secondary);

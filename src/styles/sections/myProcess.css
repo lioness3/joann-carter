@@ -4,6 +4,8 @@
   flex-direction: row;
   padding: 10rem 2rem;
   justify-content: center;
+  /* ALIGN-ITEMS centers text and image on each other vertically */
+  align-items: center;
   margin: auto;
   background-color: var(--mainBg);
 }
@@ -11,6 +13,10 @@
 /* so the section lines up at the correct y- axis when clicking on link to section */
 #my-process {
   scroll-margin-top: var(--scroll-margin-top);
+}
+/* FIRST section sits right under the SECTION title, so it needs less top PADDING */
+.process-section:first-child {
+  padding-top: 3rem;
 }
 /* Zig-zag: even sections flip */
 .process-section:nth-child(even) {
@@ -52,38 +58,21 @@
   text-align: center;
 }
 .process-bold-word {
-  font-weight: bold;
+  font-weight: var(--weight-bold);
 }
-#process-github-link {
+
+.process-link {
+  font-weight: var(--weight-bold);
   color: var(--primary);
   cursor: pointer;
+  text-transform: uppercase;
 }
-/* Intro call to action for link to figma: button stacked above the text */
-
-.process-cta {
-  padding: 0rem 0rem 5rem;
-}
-.process-cta .process-text {
-  font-size: 0.85rem;
-  max-width: 30vw;
-  padding: 0;
-}
-.process-cta .process-text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.process-cta .process-text-container img {
-  max-width: 40vw;
-  border-radius: 50%;
-  padding-bottom: 5rem;
-}
-
 /* ⭐ Mobile layout */
 @media (max-width: 969px) {
   .process-section,
   .process-section:nth-child(even) {
     flex-direction: column;
+    align-items: stretch; /* stacked layout keeps full width */
     text-align: center;
   }
   /* center the 700px-max text column in the stacked layout */

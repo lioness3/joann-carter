@@ -1,3 +1,4 @@
+import LoadingImage from "../LoadingImage";
 import "../../styles/cards/overviewCard.css";
 import Button from "../Button";
 import { FaGithub } from "react-icons/fa";
@@ -23,7 +24,7 @@ export default function OverviewCard({
       </div>
       <h4 className="info-card-headline">{catchPhrase}</h4>
       <p className="info-card-description">{summary}</p>
-      <img src={image} alt="Overview" className="info-card-image" />
+      <LoadingImage src={image} alt="Overview" className="info-card-image" />
 
       {sourceCode && (
         <Button
