@@ -24,30 +24,21 @@ test.describe("Homepage Sections", () => {
     }
   });
 
-  test("footer displays contact information", async ({ page }) => {
-    // Scroll to bottom of page
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-
-    // Footer should be visible
-    const footer = page.locator("footer");
-    await expect(footer).toBeVisible();
+  test("contact section displays site info", async ({ page }) => {
+    const contact = page.locator("#contact-me");
+    await contact.scrollIntoViewIfNeeded();
+    await expect(contact.locator(".contact-updated")).toContainText("Last Updated");
+    await expect(contact.locator(".contact-location")).toContainText("New Hampshire");
+    await expect(contact.locator(".contact-copyright")).toContainText("Joann Carter");
   });
 
-  test("footer links are functional", async ({ page }) => {
-    // Scroll to footer
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-
-    // Get all links in footer
-    const footerLinks = page.locator("footer a");
-    const linkCount = await footerLinks.count();
-
-    // Should have at least one link
-    expect(linkCount).toBeGreaterThan(0);
-
-    // Links should have href attributes
-    for (let i = 0; i < Math.min(linkCount, 3); i++) {
-      const href = await footerLinks.nth(i).getAttribute("href");
-      expect(href).toBeTruthy();
+  test("contact social links are functional", async ({ page }) => {
+    const links = page.locator("#contact-me .contact-socials a");
+    await links.first().scrollIntoViewIfNeeded();
+    await expect(links).toHaveCount(3);
+    for (const [i, domain] of ["linkedin.com", "github.com", "behance.net"].entries()) {
+      await expect(links.nth(i)).toHaveAttribute("href", new RegExp(domain));
+      await expect(links.nth(i)).toHaveAttribute("target", "_blank");
     }
   });
 

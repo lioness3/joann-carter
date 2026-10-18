@@ -40,6 +40,8 @@
 .info-card-title {
   font-size: 1.75rem;
   font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-narrow);
   color: var(--text-90);
   margin: 0;
 }

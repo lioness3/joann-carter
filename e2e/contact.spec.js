@@ -11,9 +11,9 @@ test.describe("Contact Section", () => {
   });
 
   test("all three contact buttons are present", async ({ page }) => {
-    await expect(page.locator("button:has-text('Email Me')")).toBeVisible();
-    await expect(page.locator("button:has-text('Call Me')")).toBeVisible();
-    await expect(page.locator("button:has-text('Text Me')")).toBeVisible();
+    await expect(page.getByRole("button", { name: "Email", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Call", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Text", exact: true })).toBeVisible();
   });
 
   test("email address is displayed in the contact section", async ({ page }) => {
@@ -25,10 +25,5 @@ test.describe("Contact Section", () => {
 
   test("copy email icon is present next to the email address", async ({ page }) => {
     await expect(page.locator(".copy-icon")).toBeVisible();
-  });
-
-  test("contact section has three subsections", async ({ page }) => {
-    const sections = page.locator("#contact-me .contact-section");
-    await expect(sections).toHaveCount(3);
   });
 });

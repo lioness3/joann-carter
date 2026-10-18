@@ -25,12 +25,6 @@ test.describe("Accessibility basics", () => {
     expect(alt && alt.trim().length).toBeGreaterThan(0);
   });
 
-  test("footer logo image has a non-empty alt attribute", async ({ page }) => {
-    const img = page.locator(".footer-image");
-    const alt = await img.getAttribute("alt");
-    expect(alt && alt.trim().length).toBeGreaterThan(0);
-  });
-
   test("navbar logo image has a non-empty alt attribute", async ({ page }) => {
     const img = page.locator(".logo img");
     const alt = await img.getAttribute("alt");

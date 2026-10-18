@@ -26,6 +26,7 @@
   max-width: 30%;
   text-align: center;
   color: var(--text-90);
+
 }
 
 .about-description {
@@ -60,7 +61,10 @@
     line-height: 1.25;
     /* 100 pixels less than the max size of the portrait image */
     max-width: 300px;
-    margin: 0;
+    /* LEFT and RIGHT at 0 with AUTO margins centers the quote on the image in every browser */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     color: var(--white);
   }
 
@@ -78,6 +82,7 @@
   }
 
   .about-description {
+    width: 90vw;
     max-width: 400px;
     margin: 0 auto;
     font-size: 1rem;

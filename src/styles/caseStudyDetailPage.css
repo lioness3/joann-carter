@@ -4,7 +4,7 @@
 .case-study-detail-layout {
   height: calc(100vh - var(--nav-height));
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 310px 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "menu head"
@@ -127,6 +127,8 @@
 }
 
 .side-menu-back {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-narrow);
   color: var(--text-60);
   font-size: 0.75rem;
   text-align: center;
@@ -160,6 +162,8 @@ html[data-theme="dark"] .side-menu-icon {
 }
 
 .side-menu-item {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-narrow);
   cursor: pointer;
   padding: 8px 12px;
   display: flex;

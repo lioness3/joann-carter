@@ -13,7 +13,7 @@ export default function MyProcess() {
     <section id="my-process" className="process-wrapper">
       <div className="process-section">
         <div className="process-text-container">
-          <h2>Idea to Finished Design</h2>
+          <h3>Idea to Finished Design</h3>
           <p className="process-text">
             Follow a real life{" "}
             <a
@@ -24,7 +24,7 @@ export default function MyProcess() {
             >
               example
             </a>{" "}
-            of my design process from an idea to a finished design , with each
+            of my design process from an idea to a finished design, with each
             step documented in Figma.
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function MyProcess() {
       </div>
       <div className="process-section">
         <div className="process-text-container">
-          <h2>Listen & Empathize</h2>
+          <h3>Listen & Empathize</h3>
           <p className="process-text">
             Being <span className="process-bold-word">empathetic</span> and
             truly listening to understand the people I am designing for is the
@@ -59,7 +59,7 @@ export default function MyProcess() {
 
       <div className="process-section">
         <div className="process-text-container">
-          <h2>User Research</h2>
+          <h3>User Research</h3>
           <p className="process-text">
             User research grounds my design decisions in real evidence rather
             than assumptions or trends. By{" "}
@@ -80,7 +80,7 @@ export default function MyProcess() {
       </div>
       <div className="process-section">
         <div className="process-text-container">
-          <h2>Analyze Competitors</h2>
+          <h3>Analyze Competitors</h3>
           <p className="process-text">
             I study competitors to understand what
             <span className="process-bold-word"> works well </span>and
@@ -98,7 +98,7 @@ export default function MyProcess() {
       </div>
       <div className="process-section">
         <div className="process-text-container">
-          <h2>Low-Fidelity Prototypes</h2>
+          <h3>Low-Fidelity Prototypes</h3>
           <p className="process-text">
             I use Low‑fi prototypes to help me
             <span className="process-bold-word"> explore ideas quickly </span>
@@ -117,7 +117,7 @@ export default function MyProcess() {
       </div>
       <div className="process-section">
         <div className="process-text-container">
-          <h2>High-Fidelity Prototypes</h2>
+          <h3>High-Fidelity Prototypes</h3>
           <p className="process-text">
             High‑fi prototypes are my favorite part of the process because they
             <span className="process-bold-word"> bring the design to life</span>
@@ -136,7 +136,7 @@ export default function MyProcess() {
       </div>
       <div className="process-section">
         <div className="process-text-container">
-          <h2>Development</h2>
+          <h3>Development</h3>
           <p className="process-text">
             I also develop the code that makes my prototypes functional. Several
             of my development projects are available to view on{" "}

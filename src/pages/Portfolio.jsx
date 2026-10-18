@@ -6,7 +6,6 @@ import MyProcess from "../components/sections/MyProcess";
 import AboutMe from "../components/sections/AboutMe";
 import Resume from "../components/sections/Resume";
 import Contact from "../components/sections/Contact";
-import Footer from "../components/sections/Footer";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -69,7 +68,6 @@ function Portfolio({ studies }) {
         subtitle={"Get in touch with me through email, call, or text."}
       />
       <Contact />
-      <Footer />
     </main>
   );
 }

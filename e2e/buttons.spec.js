@@ -22,23 +22,23 @@ test.describe("Homepage action buttons", () => {
     await expect(btn).toHaveAttribute("target", "_blank");
   });
 
-  test("contact Email Me button is visible and is a button element", async ({ page }) => {
+  test("contact Email button is visible and is a button element", async ({ page }) => {
     await page.locator("#contact-me").scrollIntoViewIfNeeded();
-    const btn = page.locator("button:has-text('Email Me')");
+    const btn = page.getByRole("button", { name: "Email", exact: true });
     await expect(btn).toBeVisible();
     await expect(btn).toHaveRole("button");
   });
 
-  test("contact Call Me button is visible and is a button element", async ({ page }) => {
+  test("contact Call button is visible and is a button element", async ({ page }) => {
     await page.locator("#contact-me").scrollIntoViewIfNeeded();
-    const btn = page.locator("button:has-text('Call Me')");
+    const btn = page.getByRole("button", { name: "Call", exact: true });
     await expect(btn).toBeVisible();
     await expect(btn).toHaveRole("button");
   });
 
-  test("contact Text Me button is visible and is a button element", async ({ page }) => {
+  test("contact Text button is visible and is a button element", async ({ page }) => {
     await page.locator("#contact-me").scrollIntoViewIfNeeded();
-    const btn = page.locator("button:has-text('Text Me')");
+    const btn = page.getByRole("button", { name: "Text", exact: true });
     await expect(btn).toBeVisible();
     await expect(btn).toHaveRole("button");
   });

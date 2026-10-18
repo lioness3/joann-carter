@@ -17,6 +17,8 @@
 }
 
 .ux-case-study-menu-link {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-narrow);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -44,6 +46,8 @@ html[data-theme="dark"] .ux-case-study-menu-icon {
 }
 
 .ux-case-study-menu-back {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-narrow);
   padding: 1rem 2rem;
   color: var(--text-90);
   font-weight: var(--weight-bold);

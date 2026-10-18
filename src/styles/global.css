@@ -14,16 +14,16 @@ GLOBAL STYLE SHEET  */
   /* LIGHT MODE - ICON FILTER is neutral */
   --icon-filter: none;
 
-  /* LIGHT MODE - Featured accent (gold, not used by buttons) */
-  --featured: #f5b942;
-  --featured-text: #3d2a00;
+  /* LIGHT MODE - Featured accent  */
+  --featured: #f0f06a;
+  --featured-text: var(--secondary);
 
   /* LIGHT MODE - Backgrounds */
   --mainBg: #ffffff;
   --offWhite: #f7f7f8;
   --ltGrey: #efeff1;
   --medGrey: #e4e4e7;
-  --transparent-bg: rgb(from var(--offWhite) r g b / 0.7);
+  --transparent-bg: rgb(from var(--offWhite) r g b / 0.8);
 
   /* LIGHT MODE - Text colors (derived from secondary for contrast) */
   --text-90: rgb(from var(--secondary) r g b / 0.9); /* WCAG AA: 18.5:1 */
@@ -59,7 +59,7 @@ GLOBAL STYLE SHEET  */
   /* LAYOUT DIMENSIONS  */
   --nav-height: 70px;
   --case-study-header-height: 70px;
-  --section-title-height: 300px;
+  --section-title-height: max-content;
   --section-padding-bottom: 300px;
 
   /* TYPOGRAPHY - font stack and weights shared across the site */
@@ -80,14 +80,15 @@ GLOBAL STYLE SHEET  */
   --radius-xs: 2px;
   --radius-sm: 6px;
   --borderRadius: 12px;
-  /* LETTER-SPACING shared by SECTION titles and menu buttons */
-  --letter-spacing-wide: 0.15em;
   --btnBorderRadius: 20px;
   --blockGap: 0.25rem;
   --scroll-margin-top: calc(
     var(--section-title-height) + var(--nav-height) + 40px
   );
   --case-study-scroll-margin-top: 120px;
+  /* LETTER-SPACING shared by SECTION titles and menu buttons */
+  --letter-spacing-wide: 0.1em;
+  --letter-spacing-narrow: 0.05em;
 }
 
 /* ===================================
@@ -149,8 +150,8 @@ html[data-theme="dark"] {
   --icon-filter: brightness(1.4);
 
   /* DARK MODE - Featured accent */
-  --featured: #f5b942;
-  --featured-text: #2a1c00;
+  --featured: #f5ec42;
+  --featured-text: var(--secondary);
 
   /* DARK MODE - Button hover color */
   --btn-hover: #ff7ab6;

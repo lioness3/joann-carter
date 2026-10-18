@@ -103,11 +103,12 @@
     flex-direction: column;
     align-items: center;
     max-width: 100%;
+    gap: 8rem;
   }
   .case-wrapper {
     padding-bottom: calc(var(--section-padding-bottom) + 100px);
   }
   .case-study-card {
-    width: 80vw;
+    width: 70vw;
   }
 }

@@ -1,5 +1,5 @@
 import LoadingImage from "../LoadingImage";
-import portraitImage from "../../assets/images/portrait.jpeg";
+import portraitImage from "../../assets/images/ux_portfolio_headshot_800.webp";
 import "../../styles/sections/aboutMe.css";
 export default function AboutMe() {
   return (

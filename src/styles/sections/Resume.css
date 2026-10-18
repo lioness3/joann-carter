@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 3rem;
   color: var(--text-90);
-
   margin: 0 auto;
   padding-bottom: var(--section-padding-bottom);
   background-color: var(--mainBg);
@@ -11,6 +10,7 @@
 /* so the section lines up at the correct y- axis when clicking on link to section */
 #resume-section {
   scroll-margin-top: var(--scroll-margin-top);
+
 }
 
 .resume-content-section {
@@ -122,7 +122,7 @@
 }
 @media (max-width: 969px) {
   .resume-wrapper {
-    padding: 3rem 3rem var(--section-padding-bottom) 3rem;
+    padding: 0rem 1rem var(--section-padding-bottom) 1rem;
   }
   .resume-title-icon {
     max-width: 35px;

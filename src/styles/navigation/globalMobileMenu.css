@@ -1,7 +1,8 @@
 /* overlay */
 .global-overlay {
   position: fixed;
-  inset: 0;
+  /* starts below the NAVBAR so the header is not dimmed */
+  inset: var(--nav-height) 0 0 0;
   background: transparent;
   pointer-events: none;
   transition: background var(--duration-base) ease;
@@ -20,8 +21,8 @@
   flex-direction: column;
   top: var(--nav-height);
   left: 0;
-  /* 320px on larger phones, 85vw on very small screens so it never overflows */
-  width: min(320px, 85vw);
+  /* full width like the CASE STUDY CONTENTS menu */
+  width: 100%;
   margin: 0;
   height: calc(100vh - var(--nav-height));
   background: var(--offWhite);
@@ -39,10 +40,10 @@
 
 /* close button for mobile menu */
 .global-close-btn {
-  align-self: flex-end;
+  align-self: flex-start;
   background: none;
   font-size: 2rem;
-  color: var(--text-60);
+  color: var(--text-90);
   cursor: pointer;
   padding: 0;
   width: 2.5rem;
@@ -52,11 +53,17 @@
   justify-content: center;
   border: none;
   transition: color var(--duration-fast) ease;
-  margin-bottom: rem;
+  margin-bottom: 1rem;
+}
+
+.global-close-btn:hover {
+  color: var(--primary);
 }
 
 /* links in mobile menu */
 .global-mobile-menu a {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-narrow);
   display: block;
   color: var(--text-90);
   text-decoration: none;

@@ -47,5 +47,7 @@
   }
   .section-title-subtitle {
     font-size: 0.75rem;
+    max-width: 80vw;
+   
   }
 }

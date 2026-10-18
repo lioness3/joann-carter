@@ -8,6 +8,7 @@
   align-items: center;
   margin: auto;
   background-color: var(--mainBg);
+  min-height: 50vh;
 }
 
 /* so the section lines up at the correct y- axis when clicking on link to section */
@@ -31,6 +32,11 @@
   max-width: 700px;
   text-align: center;
   color: var(--text-90);
+}
+.process-text-container h3 {
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-narrow);
 }
 .process-text {
   padding: 3rem;
@@ -83,7 +89,9 @@
     margin-bottom: 0;
   }
   .process-text {
-    padding-top: 1rem;
+    padding:0;
+    font-size: 1rem;
+    line-height: 1.55;
   }
   .process-section {
     padding: 3rem 1rem;
