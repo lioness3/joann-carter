@@ -100,10 +100,11 @@
 
 @media (max-width: 969px) {
   .case-studies-list {
+    padding-top: 1rem;
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-    gap: 8rem;
+    gap: 2rem;
   }
   .case-wrapper {
     padding-bottom: calc(var(--section-padding-bottom) + 100px);

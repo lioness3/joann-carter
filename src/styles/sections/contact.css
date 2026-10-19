@@ -25,12 +25,12 @@
   border-left: 1px solid var(--border-secondary);
 }
 .contact-group-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: var(--weight-semibold);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-narrow);
-  color: var(--text-90);
-  margin: 0 0 .5rem 0;
+  color: var(--text-80);
+  margin: 0 0 0.5rem 0;
 }
 .contact-actions {
   display: flex;
@@ -73,6 +73,7 @@
   align-items: center;
   gap: 0.5rem;
   color: var(--primary);
+  font-size: 1.5rem;
   font-weight: var(--weight-bold);
   transition: color var(--duration-fast) ease;
 }
@@ -92,15 +93,13 @@
 .contact-values {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  margin-bottom: 2.5rem;
+  margin: 2.5rem 0;
   font-size: 1.5rem;
-  color: var(--text-90);
+  color: var(--text-60);
 }
-/* LAST UPDATED stands out with weight and size, plain text so it does not read as a button */
+
 .contact-updated {
   font-size: 1rem;
-
   color: var(--text-80);
 }
 .contact-location {
@@ -114,28 +113,56 @@
 
 @media (max-width: 969px) {
   .contact-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 2.5rem;
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 1rem;
     text-align: center;
+  }
+  .contact-values {
+    text-align: left;
+    font-size: 1rem;
+  }
+  .contact-group-title {
+    font-size: 0.9rem;
   }
   .contact-links,
   .contact-about {
     max-width: none;
     width: 100%;
   }
+
+  .contact-socials {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: left;
+    padding-left: 1rem;
+    gap: 0.5rem;
+  }
+  .contact-actions {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0.5rem;
+  }
   .contact-actions,
-  .contact-socials,
   .contact-subtitle {
     justify-content: center;
   }
   .contact-about {
     align-items: center;
+    gap: 0;
+  }
+  .contact-btn {
+    width: 100%;
   }
   .contact-links {
-    padding: 2rem 0 0 0;
+    padding: 0;
     border-left: none;
+  }
+  .contact-group:nth-child(2) {
     border-top: 1px solid var(--border-secondary);
+    border-bottom: 1px solid var(--border-secondary);
+    padding: 2rem 0rem;
   }
 }

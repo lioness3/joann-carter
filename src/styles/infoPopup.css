@@ -54,3 +54,11 @@
     transform: translateY(0);
   }
 }
+
+/* MOBILE matches the ABOUT-DESCRIPTION font size, tighter LINE-HEIGHT */
+@media (max-width: 969px) {
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}

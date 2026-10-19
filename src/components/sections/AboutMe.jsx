@@ -6,7 +6,7 @@ export default function AboutMe() {
     <section className="about-wrapper" id="about-me">
       <div className="about-bio-panel">
         <h2 className="about-quote">
-          “I believe good design should feel natural, not instructional.”
+          “There's no reason technology should be difficult to use.”
         </h2>
 
         <div className="about-image">
@@ -14,8 +14,8 @@ export default function AboutMe() {
         </div>
       </div>
       <p className="about-description">
-        I am a UX Engineer who blends creativity with logical thinking. I create
-        intuitive experiences with accessibility and inclusivity in mind,
+        I am an UX Engineer who blends creativity with logical thinking. I
+        create intuitive experiences with accessibility and inclusivity in mind,
         ensuring all users feel empowered and never overwhelmed.
       </p>
     </section>

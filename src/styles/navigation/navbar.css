@@ -15,6 +15,12 @@
   display: flex;
   align-items: center;
   width: 70%;
+  /* SPACE-EVENLY gives equal gaps between links of different widths */
+  justify-content: space-evenly;
+}
+/* FLEX none sizes each link to its text instead of an equal slot */
+.nav-bar-menu-items a {
+  flex: none;
 }
 /* CONTAINER FOR LOGO IMAGE  */
 .logo {
@@ -84,6 +90,7 @@
   .hamburger-btn,
   .hamburger-btn img {
     display: block;
+    width: 2rem;
   }
 
   .logo {
