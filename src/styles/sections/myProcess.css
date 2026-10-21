@@ -11,10 +11,6 @@
   min-height: 50vh;
 }
 
-/* so the section lines up at the correct y- axis when clicking on link to section */
-#my-process {
-  scroll-margin-top: var(--scroll-margin-top);
-}
 /* FIRST section sits right under the SECTION title, so it needs less top PADDING */
 .process-section:first-child {
   padding-top: 3rem;

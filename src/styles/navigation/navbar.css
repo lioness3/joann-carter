@@ -43,7 +43,9 @@
   color: var(--text-80);
   font-weight: var(--weight-bold);
 }
-.nav-bar a:hover {
+.nav-bar a:hover,
+/* ACTIVE link is the clicked one or the section in view */
+.nav-bar a.active {
   color: var(--primary);
 }
 /* CONTAINER FOR THEME TOGGLE */

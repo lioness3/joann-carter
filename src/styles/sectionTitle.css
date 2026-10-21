@@ -3,6 +3,8 @@
   text-align: center;
   padding: 3rem 0;
   height: var(--section-title-height);
+  /* stops the sticky NAVBAR from covering the title after a nav link scroll */
+  scroll-margin-top: var(--nav-height);
 }
 
 .section-title-text {

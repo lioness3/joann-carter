@@ -200,7 +200,13 @@ html[data-theme="dark"] .side-menu-icon {
     display: flex;
     flex-direction: row;
     order: -1;
-    gap: 2rem;
+    /* SHRINK 0 keeps the BUTTON from being squeezed by a long TITLE */
+    flex-shrink: 0;
+    gap: 1rem;
+  }
+  /* GAP keeps the TITLE off the CONTENTS button on narrow phones */
+  .case-study-simple-header {
+    gap: 1rem;
   }
 
   .case-study-scrolling-container {

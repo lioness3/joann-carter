@@ -7,11 +7,6 @@
   padding-bottom: var(--section-padding-bottom);
   background-color: var(--mainBg);
 }
-/* so the section lines up at the correct y- axis when clicking on link to section */
-#resume-section {
-  scroll-margin-top: var(--scroll-margin-top);
-
-}
 
 .resume-content-section {
   max-width: 900px;

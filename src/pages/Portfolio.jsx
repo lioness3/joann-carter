@@ -16,7 +16,9 @@ function Portfolio({ studies }) {
   useEffect(() => {
     if (location.state?.scrollTo) {
       const sectionId = location.state.scrollTo;
-      const el = document.getElementById(sectionId);
+      // scroll to the SECTION TITLE above the section so the title stays visible
+      const section = document.getElementById(sectionId);
+      const el = section?.previousElementSibling ?? section;
 
       if (el) {
         setTimeout(() => {

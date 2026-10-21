@@ -38,4 +38,9 @@
   .info-card-description {
     font-size: 0.95rem;
   }
+
+  /* ALIGN-SELF centers the image in the left-aligned mobile card */
+  .info-card-image {
+    align-self: center;
+  }
 }

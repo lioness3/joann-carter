@@ -8,10 +8,6 @@
   background-color: var(--mainBg);
   padding: 2rem 2rem 4rem 2rem;
 }
-/* so the section lines up at the correct y- axis when clicking on link to section */
-#contact-me {
-  scroll-margin-top: var(--scroll-margin-top);
-}
 
 /* RIGHT column, BORDER-LEFT divides the two columns */
 .contact-links {
